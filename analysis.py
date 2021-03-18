@@ -7,6 +7,13 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
+# Reading the Iris CSV file into a pandas DataFrame
+df = pd.read_csv('iris.csv')
+# Adding column titles to the data
+df.columns = ['Sepal Lenght', 'Sepal Width', 'Petal Lenght', 'Petal Width', 'Species']
+print(df)
+
+
 #from sklearn.datasets import load_iris
 #iris = load_iris()
 #print(iris.DESCR)
@@ -16,4 +23,4 @@ import seaborn as sns
     #return iris
 
 
-print(load_data)
+#print(load_data)
