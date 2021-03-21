@@ -14,59 +14,24 @@ import sys
 # The Names parameter adds column titles 
 df = pd.read_csv('iris.csv', header=None, names=['Sepal Lenght(cm)', 'Sepal Width(cm)', 'Petal Lenght(cm)', 'Petal Width(cm)', 'Species']) 
 
-
-# Creating text file called Comparison to print output results of comparing the species
-sys.stdout = open("Comparison.txt", "w", newline='\r\n') # Adding a return and newline between each question
-
-df.shape # Shape should return 150 rows x 5 columns
-# Count of how many of each species
-print(df['Species'].value_counts())
-
+# Creating text file called Iris Analysis to print output results of comparing the species
+sys.stdout = open("Iris Analysis", "w", newline='\n') # Adding a return and newline between each question
+print('******Iris Dataset Analysis********\n______________________________________________________________________________')
+# An overview of the entire dataframe
+print(df.info(),'\n______________________________________________________________________________')
+# Returns the first 5 rows. Allows us to see a overview of the data
+print('First 5 rows of data:\n',df.head(),'\n______________________________________________________________________________')
 # Cleaning Data 
-null_values = df.isnull().sum() # Checking for null values
-print(null_values)
-d = df.duplicated().sum() # Total no of duplicates in the dataset
-f= df[df.duplicated()] #This shows the actual duplicate rows
-print(d, f)
-
-#Finding the average lenght and width of Sepal and Petal for each species
-mean_values = df.groupby('Species').mean()
-print('\t\t\t\t\t\t\tAVERAGE VALUES\n',mean_values)
-
-df.info()
-df.describe()
-
-print(df.corr())
-sns.heatmap(df.corr(), cmap='coolwarm', annot = True)
-#closing text file
-sys.stdout.close()
+print('Checking for NULL values:\n',df.isnull().sum()) # Checking for null values
+print('\rNumber of duplicates:\t', df.duplicated().sum()) # Total no of duplicates in the dataset
+#This shows the actual duplicate rows
+print('\rDuplicate rows:\n\t',df[df.duplicated()],'\n______________________________________________________________________________') 
+# Count of how many of each species
+print('Count of each unique species:\r',df['Species'].value_counts(),'\n______________________________________________________________________________')
+# An summary of stats for each variable(count, mean, min, max, standard deviation, )
+print('Stat Summary: \r')
+print(df.describe(),'\n______________________________________________________________________________')
 
 
-
-
-# Creating text file called Comparison to print output results of comparing the species
-sys.stdout = open("Iris-setosa txt", "w", newline='\r\n') # Adding a return and newline between each question
-setosadf = df[df['Species'] == 'Iris-setosa']
-print(setosadf.value_counts())
-#closing text file
-sys.stdout.close()
-
-
-
-
-# Creating text file called Iris-Versicolor to print output results of comparing the species
-sys.stdout = open("Iris-versicolor txt", "w", newline='\r\n') # Adding a return and newline between each question
-versicolordf = df[df['Species'] == 'Iris-versicolor']
-print(versicolordf.value_counts())
-#closing text file
-sys.stdout.close()
-
-
-
-
-# Creating text file called Iris-virginica to print output results of comparing the species
-sys.stdout = open("Iris-virginica txt", "w", newline='\r\n') # Adding a return and newline between each question
-virginicadf = df[df['Species'] == 'Iris-virginica']
-print(virginicadf.count())
-#closing text file
+# Closing Iris Analysis File
 sys.stdout.close()
