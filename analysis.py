@@ -32,6 +32,11 @@ print('Count of each unique species:\r',df['Species'].value_counts(),'\n________
 print('Stat Summary: \r')
 print(df.describe(),'\n______________________________________________________________________________')
 
+# Diving data into seprate dataframes to futher investigate each species by slicing
+setosadf=df.loc[df["Species"]=="Iris-setosa"] # .loc gets the rows in Species == Iris-setosa
+versicolordfa=df.loc[df["Species"]=="Iris-virginica"] # .loc gets the rows in Species == Iris-virginica
+virginicadf=df.loc[df["Species"]=="Iris-versicolor"] # .loc gets the rows in Species == Iris-versicolor
+
 
 # Closing Iris Analysis File
 sys.stdout.close()
