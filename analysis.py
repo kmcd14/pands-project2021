@@ -37,6 +37,12 @@ setosadf=df.loc[df["Species"]=="Iris-setosa"] # .loc gets the rows in Species ==
 versicolordfa=df.loc[df["Species"]=="Iris-virginica"] # .loc gets the rows in Species == Iris-virginica
 virginicadf=df.loc[df["Species"]=="Iris-versicolor"] # .loc gets the rows in Species == Iris-versicolor
 
+# Creating a histogram for each variable 
+sns.FacetGrid(df,hue='Species',height=5).map(sns.histplot,'Petal Lenght(cm)').add_legend().set_titles('Petal Lenght(cm)')
+sns.FacetGrid(df,hue='Species',height=5).map(sns.histplot,'Petal Width(cm)').add_legend().set_titles('Petal Width(cm)')
+sns.FacetGrid(df,hue='Species',height=5).map(sns.histplot,'Sepal Lenght(cm)').add_legend().set_titles('Sepal Lenght(cm)')
+sns.FacetGrid(df,hue='Species',height=5).map(sns.histplot,'Sepal Width(cm)').add_legend().set_titles('Sepal Width(cm)')
+plt.show()
 
 # Closing Iris Analysis File
 sys.stdout.close()
