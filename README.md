@@ -27,6 +27,9 @@ The aim of this project is to
 </br>
 <br>
 <h3><b><u>What Is The Iris DataSet?</u></b></h3>
+<i>Fisher's Iris data</i> otherwise known as <i>The Iris flower data set</i> is a multivariate (more than one variable) data set  by the British statistician, eugenicist, and biologist Ronald Fisher in his 1936 paper <i>The use of multiple measurements in taxonomic problems as an example of linear discriminant analysis</i> [1].
+
+The dataset contains 150 records with each row representing a species of iris flower. Each sample is divided under five columns. - Sepal Length, Sepal Width, Petal Length and Petal Width all in centimeters and the fifth column being the species of Iris. The three different types of irises’ recorded are; Iris Setosa, Iris Versicolour and Iris Virginica.
 
 ----
 </br>
@@ -46,3 +49,6 @@ The aim of this project is to
 
 
 <h2><b><u>References</u></b></h2>
+https://pandas.pydata.org/docs/reference/api/pandas.read_csv.html
+https://www.kite.com/python/answers/how-to-redirect-print-output-to-a-text-file-in-python
+https://data36.com/plot-histogram-python-pandas/
