@@ -38,6 +38,9 @@ versicolordfa=df.loc[df["Species"]=="Iris-virginica"] # .loc gets the rows in Sp
 virginicadf=df.loc[df["Species"]=="Iris-versicolor"] # .loc gets the rows in Species == Iris-versicolor
 
 # Creating a histogram for each variable 
+# A histogram shows the number of occurrences of different values in a dataset
+# these unique values will be grouped into ranges. These ranges are called bins or buckets
+# automatically groups your data into bins
 sns.FacetGrid(df,hue='Species',height=5).map(sns.histplot,'Petal Lenght(cm)').add_legend().set_titles('Petal Lenght(cm)')
 sns.FacetGrid(df,hue='Species',height=5).map(sns.histplot,'Petal Width(cm)').add_legend().set_titles('Petal Width(cm)')
 sns.FacetGrid(df,hue='Species',height=5).map(sns.histplot,'Sepal Lenght(cm)').add_legend().set_titles('Sepal Lenght(cm)')
@@ -52,6 +55,12 @@ sns.scatterplot(x = 'Petal Width(cm)', y = 'Petal Lenght(cm)',data=df, hue='Spec
 sns.set(style='whitegrid')
 plt.show()
 
+# find the pairwise correlation of all columns in the dataframe.
+print(df.corr())
+# Heat Map is a graphical representation of the correlation between all the numerical variables in a dataset
+# cmap = Colour map, annot=True adds text 
+sns.heatmap(df.corr(), cmap='RdYlGn',linecolor='white',linewidths=1, annot = True, )
+plt.show()
 
 # Closing Iris Analysis File
 sys.stdout.close()
