@@ -44,5 +44,14 @@ sns.FacetGrid(df,hue='Species',height=5).map(sns.histplot,'Sepal Lenght(cm)').ad
 sns.FacetGrid(df,hue='Species',height=5).map(sns.histplot,'Sepal Width(cm)').add_legend().set_titles('Sepal Width(cm)')
 plt.show()
 
+# Creating a scatterplot for each pair of variables using seaborn
+sns.scatterplot(x = 'Sepal Width(cm)', y = 'Sepal Lenght(cm)',data=df, hue='Species')
+sns.set(style='whitegrid')
+plt.show()
+sns.scatterplot(x = 'Petal Width(cm)', y = 'Petal Lenght(cm)',data=df, hue='Species')
+sns.set(style='whitegrid')
+plt.show()
+
+
 # Closing Iris Analysis File
 sys.stdout.close()
