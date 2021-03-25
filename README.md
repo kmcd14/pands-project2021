@@ -19,7 +19,19 @@
 ---
 <br>
 <h3><b><u>Description</u></b></h3>
-This document is relating to pands-project2021 for programming and scripting module. The aim of this project is to research the well-know Fisher's Iris data set, doing so by writing documentation and python code to explore the data.
+This document is relating to pands-project2021 for programming and scripting module. The aim of this project is to research the well-know Fisher's Iris data set, doing so by writing documentation and python code to investigate the data. 
+<br></br>
+
+ <h4> To do list: </h4>
+ <ul>
+  <li>Research the dataset to get an understanding of the data recorded and decide what question I want to use the data to answer.</li>
+  <li>Find the iris dataset, download it and convert it into a csv file. Import the dataset into visual studio code using the pandas module and load it into a pandas dataframe.</li>
+  <li>Run a series of methods on the dataset to get a general overview of the data. Make sure there are missing values etc.</li>
+  <li>Divide the iris dataframe into smaller data frames which consist of each species. To allow further investigation of the data to answer my question. </li>
+  <li>Have all outputs generated to a summary text file.</li>
+  <li>Visualise the data using matplotlib and seaborn.</li>
+   <li>Write a readme file which details methods, modules, research and conclusions of my analysis.</li>
+</ul>
 
 -----
 </br>
