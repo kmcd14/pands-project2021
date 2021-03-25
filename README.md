@@ -49,16 +49,45 @@ The dataset has been downloaded from  the UCI repository.<h4>
 </br>
 
 <br>
-<h3><b><u>Modules Used</u></b></h3>
+<h3><b><u>Libraries Used</u></b></h3>
 
-```
-    import numpy as np
-    import pandas as pd 
-    import matplotlib.pyplot as plt
-    import seaborn as sns
-    Import sys
-    
-```
+The below image demostrates how to import the libraries used:
+
+![importing libraries](Images\importing_libraries.PNG)
+
+<u><b>Numpy</b></u> is a Python library used for working with arrays. It produces a narray object. Numpy arrays are faster and more efficient than using python lists. It does this by storing arrays in one place in memory, so they can be accessed and manipulated quickly [ref]
+
+<u><b>Pandas</b></u> is a data manipulation tool built on Numpy. It’s key structure is the dataframe. You can think of a dataframe as a spreadsheet or table but, dataframes as are more efficient and powerful and are an integral part of Python and Numpy [ref]. Pandas will allow us to select specific rows and columns within the dataframe.
+
+<u><b>Mathplotlib</b></u> is a python library used to create plots, graphs, charts etc.
+
+<u><b>Seaborn</b></u> is based on matplotlib and is also used to create data visualisations. “It provides a high-level interface for drawing attractive and informative statistical graphics.” [ref]
+
+<u><b>sys</b></u> provides numerous variables and functions to manipulate the python environment. This particular project asks for the script to return the output to a text file and not the terminal. To do this we can use stdout. Stdout is “a built-in file object that is analogous to the interpreter’s standard output stream in Python” [ref]. This output can be in any form such as a print statement.  Output can be of any form, it can be output from a print statement.  
+<br>
+
+Now that the modules are imported we can import the dataset.
+
+<br>
+<h2><b><u>Import the dataset:</u></b></h2>
+<ul>
+  <li>Download the dataset from UCI repository.</li>
+  <li>Import the dataset into python as a csv file using the pandas module. As the dataset contains no heading the name parameter can be used to include them. Without inserting column headings the data would only return 149 rows instead of 150 as pandas will automatically use the first row as a header if none is specified </li>
+  
+  ![importing data](Images\importing_data.PNG)
+ 
+ <li>You could also use the .columns() method to do this.</li>
+ </ul>
+ 
+    ````
+    df.columns(['Sepal Lenght(cm)', 'Sepal Width(cm)', 'Petal Lenght(cm)', 'Petal Width(cm)', 'Species'])
+
+    ```
+
+
+-----
+</br>
+
 <br>
 <h2><b><u>Results</u></b></h2>
 
@@ -84,3 +113,7 @@ https://pandas.pydata.org/docs/reference/api/pandas.read_csv.html
 https://www.kite.com/python/answers/how-to-redirect-print-output-to-a-text-file-in-python
 https://data36.com/plot-histogram-python-pandas/
 https://miro.medium.com/max/2000/1*nfK3vGZkTa4GrO7yWpcS-Q.png
+https://www.learnpython.org/en/Pandas_Basics
+https://numpy.org/doc/stable/user/whatisnumpy.html
+https://seaborn.pydata.org/#:~:text=Seaborn%20is%20a%20Python%20data,attractive%20and%20informative%20statistical%20graphics.
+https://www.geeksforgeeks.org/python-sys-module/#:~:text=The%20sys%20module%20in%20Python,interact%20strongly%20with%20the%20interpreter.
