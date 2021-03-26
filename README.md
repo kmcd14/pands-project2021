@@ -76,18 +76,40 @@ Now that the modules are imported we can import the dataset.
   
   ![importing data](Images\importing_data.PNG)
  
- <li>You could also use the .columns() method to do this.</li>
+ <li>note: you could also use the .columns() method to do this.</li>
  </ul>
  
-    ````
+    
     df.columns(['Sepal Lenght(cm)', 'Sepal Width(cm)', 'Petal Lenght(cm)', 'Petal Width(cm)', 'Species'])
 
-    ```
+    
 
 
 -----
 </br>
+<br>
+<h3><b><u>Creating a text file for output</u></b></h3>
+To create the text file for our analysis to be outputted to we do the following:
 
+![creating a text file](Images\creating_text_file.PNG)
+This automatically creates a new text file called Iris Analysis.
+The 'w' means write to this file. When finished with the investigation I will change this to 'r' to read the file only.
+
+![text file](Images\text_file.PNG)
+
+The text file is now created and visable within the project folder in the lefthand sidepane.
+
+![closing text file](Images\closing_text_file.PNG)
+
+It is extremely important to close the file once finshed. Otherwise it will throw a host of problems. Make sure to put the above statement at the end of your code.
+
+-----
+</br>
+<br>
+<h3><b><u>Method</u></b></h3>
+
+-----
+</br>
 <br>
 <h2><b><u>Results</u></b></h2>
 
