@@ -106,8 +106,47 @@ It is extremely important to close the file once finshed. Otherwise it will thro
 -----
 </br>
 <br>
-<h3><b><u>Method</u></b></h3>
+<h3><b><u>Data Overview</u></b></h3>
 
+![overview](Images\overview.PNG)
+
+Getting an overview of the data using .info() to make sure it loaded correctly. This will return how many rows there are, column names, whether null and the type. We know there should be 150 rows and 5 columns from reseaching the data set.
+
+By using .head() we can get a brief look at our data. It will automatically return the first 5 rows but, you can see more or less by passing a number to it.
+*note: the '________' inculded in the print statement isn't part of the function. It's a personal decision tohelp make the formatting of the output to the text file clear by acting as a divider.
+
+![cleaning data](Images\cleaning_data.PNG)
+
+Checking the data for any null values
+Checking for duplicates and if there are any, which rows. 
+*note: by using .sum() will return the amount of null/duplicates.
+
+*note: This returned three duplicates, as we know this is a balanced dataset On this occasion I decided against removing them.
+
+![count](Images\count.PNG)
+
+Using .count() we can see how many instances of each unique species the data contains. From research we know it ahould be 50 of each.
+
+![stat overview](Images\describe.PNG)
+Getting a summary of the dataframe values (count, mean,  standard deviation, min, percentile (25%, 50%, 75%), max).
+Standard Deviation: is a measure of how spread out the data is spread out around the Standard Deviation: is a measure of how spread out the data is spread out around the mean (average).  
+
+![mean groupby](Images\mean_groupby.PNG)
+
+We can take closer look at the mean values for each variable with groupby. To filter by column, pass .groupby() the column you want to sort by (‘Species’ in this case) and follow it by the aggregate function - e.g. min, max, mean, count - you wish to perform. In the above picture mean is used.
+
+<u>The following images are visualisations of the above findings:</u>
+
+![countplot](Images\count_plot.png)
+-----
+</br>
+<br>
+<h2><b><u>Seperating the data:</u></b></h2>
+
+![separating data](Images\separating_data.PNG)
+Separating the iris data frame into smaller data frames comprising of each species. This will allow further investigation.
+Now that we have separated the dataframe we can use seaborn and matplotlib to visualise each record to help make observations on.
+- scatterplot, heatmap, violinplot, 
 -----
 </br>
 <br>
@@ -139,3 +178,5 @@ https://www.learnpython.org/en/Pandas_Basics
 https://numpy.org/doc/stable/user/whatisnumpy.html
 https://seaborn.pydata.org/#:~:text=Seaborn%20is%20a%20Python%20data,attractive%20and%20informative%20statistical%20graphics.
 https://www.geeksforgeeks.org/python-sys-module/#:~:text=The%20sys%20module%20in%20Python,interact%20strongly%20with%20the%20interpreter.
+https://realpython.com/pandas-groupby/
+https://www.statisticshowto.com/probability-and-statistics/standard-deviation/#SDD
