@@ -138,10 +138,70 @@ We can take closer look at the mean values for each variable with groupby. To fi
 <u>The following images are visualisations of the above findings:</u>
 
 ![countplot](Images\count_plot.png)
+
+<h4>From the above countplot we can clearly see that there is an equal number of occurances of each species. 
+<br>
+
 -----
+<br>
+
+![hist](Images\hist_petal_lenght.png)
+
+![hist](Images\hist_petal_width.png)
+![hist](Images\hist_sepal_lenght.png)
+![hist](Images\hist_sepal_width.png)
+
+
+<h4>Above each variable is plotted on a histogram using seaborn. I used this to show how the three species differ in their anatomical features.
+This lines up with the mean values outputted
+ 
+![mean](Images\mean.PNG)
+
+Some conclusions we can draw from this:
+<li>The iris-virginica has the widest sepal width</li>
+<li>The length of the iris-virginica sepal however is shorter than both the iris-setosa and versicolour which are both similar.</li>
+ <li>The real telling difference comes  from the petal measurements; 
+ The iris-setosa is clearly distinguishable from the other two species. Being the outlier of the group and most likely to diverge from the average measurements.</li>
+
+![scatter sepal](Images\scatter_sepal.png)
+![scatter petal](Images\scatter_petal.png) 
+
+<h4>Using a scatterplot to further look at how the variables differ. The sepal scatterplot isn’t that distinguishable. We can see that the iris-setosa is more likely to be wider on average but there's a lot of crossover between iris-versicolour and iris-virginica meaning that distinguishing one from the other solely on sepal variables wouldn’t be conclusive enough as there is a lot of overlap. 
+The Petal Scatterplot is a lot more conclusive and  tells us we can confidently identify the iris-setosa; it is more likely to be shorter in both petal length and width from the other two species. Although there is still some overlap, the iris-virginica is also more likely to have a wider and longer petal.
+
+
+It is possible to do an overview of all these plots on one grid by using a pairplot. A pairplot graphs the pairwise relationships of the numerical columns for the whole dataframe. 
+
+![pairplot](Images\pairplot.png)
+
+The pairplot is a good way to get a visual overview of the data. 
+
+---
+
+Using .corr() we can further investigate the correlations between the four variables. 
+![corr](Images\correlations.PNG)
+
+To get a visual representation of these correlations we can use a matrix plots to create a heatmap. A matrix plots allows you to plot data as color-encoded matrices.
+![heatmap](Images\heatmap.png)
+
+From the heatmap we can conculde the there is a positive correlation between 
+- petal width and sepal lenght 
+- petal lenght and petal width
+- sepal lenght and petal width
+
+We can investigate these correlations futher by using the individual dataframes for each species we created earlier. By using .corr() on each separately. 
+![separate corr](Images\separate_correlations.PNG)
+Looking at the species separetly isn't as clear. The strongest correlation by far is the petal lenght and sepal lenght of the iris-versicolor. Otherwise, there isn't any major correlation when viewing each species indivadually.
+___
+
+Another way we can visualise similarties is by using a clustermap. This is another matrix plot. A cluster map employs Hierarchical Clustering to cluster the rows and columns of the matrix. This means that it orders data by relationships and we can see where similarities lie.
+![cluster map](Images\cluster_map.png)
+We can see that iris-setosa has distinct charecteristics while Viriginica and Versicolor are harder to distngusish and are thus sorted into the same clusters.
+
 </br>
 <br>
 <h2><b><u>Seperating the data:</u></b></h2>
+
 
 ![separating data](Images\separating_data.PNG)
 Separating the iris data frame into smaller data frames comprising of each species. This will allow further investigation.
@@ -180,3 +240,4 @@ https://seaborn.pydata.org/#:~:text=Seaborn%20is%20a%20Python%20data,attractive%
 https://www.geeksforgeeks.org/python-sys-module/#:~:text=The%20sys%20module%20in%20Python,interact%20strongly%20with%20the%20interpreter.
 https://realpython.com/pandas-groupby/
 https://www.statisticshowto.com/probability-and-statistics/standard-deviation/#SDD
+https://books.google.ie/books?id=pQws07tdpjoC&printsec=frontcover&dq=what+is+hierarchical+clustering&hl=en&sa=X&ved=2ahUKEwiBspX3uNHvAhWMSxUIHW3UAoIQ6AEwBXoECAUQAg#v=onepage&q=what%20is%20hierarchical%20clustering&f=false
