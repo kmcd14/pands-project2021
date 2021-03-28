@@ -82,7 +82,11 @@ Now that the modules are imported we can import the dataset.
     
     df.columns(['Sepal Lenght(cm)', 'Sepal Width(cm)', 'Petal Lenght(cm)', 'Petal Width(cm)', 'Species'])
 
-    
+Separating Data
+
+  ![separating data](Images\separating_data.PNG)
+I have also decided to separating the iris data frame into smaller data frames comprising of each species. This will allow further investigation. 
+
 
 
 -----
@@ -135,7 +139,7 @@ Standard Deviation: is a measure of how spread out the data is spread out around
 
 We can take closer look at the mean values for each variable with groupby. To filter by column, pass .groupby() the column you want to sort by (‘Species’ in this case) and follow it by the aggregate function - e.g. min, max, mean, count - you wish to perform. In the above picture mean is used.
 
-<u>The following images are visualisations of the above findings:</u>
+<u>We can use seaborn and matplotlib to visualise each record to help make observations on. The following images are visualisations of the above findings:</u>
 
 ![countplot](Images\count_plot.png)
 
@@ -163,13 +167,27 @@ Some conclusions we can draw from this:
  <li>The real telling difference comes  from the petal measurements; 
  The iris-setosa is clearly distinguishable from the other two species. Being the outlier of the group and most likely to diverge from the average measurements.</li>
 
+---
+
 ![scatter sepal](Images\scatter_sepal.png)
 ![scatter petal](Images\scatter_petal.png) 
 
 <h4>Using a scatterplot to further look at how the variables differ. The sepal scatterplot isn’t that distinguishable. We can see that the iris-setosa is more likely to be wider on average but there's a lot of crossover between iris-versicolour and iris-virginica meaning that distinguishing one from the other solely on sepal variables wouldn’t be conclusive enough as there is a lot of overlap. 
 The Petal Scatterplot is a lot more conclusive and  tells us we can confidently identify the iris-setosa; it is more likely to be shorter in both petal length and width from the other two species. Although there is still some overlap, the iris-virginica is also more likely to have a wider and longer petal.
 
+Another way we can visualize the distribution of the data is by using box and violin plots.
 
+![boxplot](Images\boxplot.png) 
+
+The box plot displays the distribution of quantitative data (Petal length, petal width, sepal length and width) which in turn allows us to make comparisons between the variables. The box shows the dataset and the whiskers (black markings) show the rest of the distribution.
+Some observations:
+- Sepal Width is comparatley short which suggests there is not much varient between species but the there is a lot of distribution.
+- Petal lenght is the longest which suggests it is the main variable which differes between species. 
+- The 4 sections of the box plot (lower quartile, upper quartile, inter quartile, whiskers) are uneven in size for each.  This shows that many flowers are similar but, vary much more in other areas such as the  upper whisker in both petal lenght and sepal lenght. 
+
+
+
+----
 It is possible to do an overview of all these plots on one grid by using a pairplot. A pairplot graphs the pairwise relationships of the numerical columns for the whole dataframe. 
 
 ![pairplot](Images\pairplot.png)
@@ -190,7 +208,9 @@ From the heatmap we can conculde the there is a positive correlation between
 - sepal lenght and petal width
 
 We can investigate these correlations futher by using the individual dataframes for each species we created earlier. By using .corr() on each separately. 
+
 ![separate corr](Images\separate_correlations.PNG)
+
 Looking at the species separetly isn't as clear. The strongest correlation by far is the petal lenght and sepal lenght of the iris-versicolor. Otherwise, there isn't any major correlation when viewing each species indivadually.
 ___
 
@@ -203,11 +223,7 @@ We can see that iris-setosa has distinct charecteristics while Viriginica and Ve
 <h2><b><u>Seperating the data:</u></b></h2>
 
 
-![separating data](Images\separating_data.PNG)
-Separating the iris data frame into smaller data frames comprising of each species. This will allow further investigation.
-Now that we have separated the dataframe we can use seaborn and matplotlib to visualise each record to help make observations on.
-- scatterplot, heatmap, violinplot, 
------
+
 </br>
 <br>
 <h2><b><u>Results</u></b></h2>
