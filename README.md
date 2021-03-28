@@ -142,7 +142,11 @@ It is extremely important to close the file once finshed. Otherwise it will thro
 
 ![overview](Images\overview.PNG)
 
+![overview output](Images\overview_output.PNG)
+
 Getting an overview of the data using .info() to make sure it loaded correctly. This will return how many rows there are, column names, whether null and the type. We know there should be 150 rows and 5 columns from reseaching the data set.
+
+![header output](Images\header.PNG)
 
 By using .head() we can get a brief look at our data. It will automatically return the first 5 rows but, you can see more or less by passing a number to it.
 
@@ -153,6 +157,10 @@ By using .head() we can get a brief look at our data. It will automatically retu
 ![cleaning data](Images\cleaning_data.PNG)
 
 Here we are checking the data for any null values. We also can check for duplicates, and, if there are any, which rows.
+
+![cleaning data output](Images\cleaning_data_output.PNG)
+
+As we can see there is no null values in this dataset but there are 3 duplicates. 
 
 *note: by using .sum() will return the amount of null/duplicates.
 
@@ -184,7 +192,7 @@ Getting a summary of the dataframe values (count, mean,  standard deviation, min
 
 ![mean groupby](Images\mean_groupby.PNG)
 
-We can take closer look at these values for each species with groupby function. To filter by column, pass .groupby() the column you want to sort by (‘Species’ in this case) and follow it by the aggregate function - e.g. min, max, mean, count - you wish to perform. In the above picture mean is used.
+We can take closer look at these values for each species with groupby function. To filter by column, pass .groupby() the column you want to sort by (‘Species’ in this case) and follow it by the aggregate function - e.g. min, max, mean, count - you wish to perform. In the above code mean is used.
 
 ![mean](Images\mean.PNG)
 
@@ -193,11 +201,15 @@ We can take closer look at these values for each species with groupby function. 
 ![min](Images\min.PNG)
 
 
+<h4>Observations: 
+From this we can see that iris-setosa varies a lot more than the other two when it comes to petal attributes. It also seems to on average have a wider sepal than iris-versicolour and iris-virginica.
+It also looks like there may be a link between the sepal and petal lenght of the iris-virginica. <h4>
+
 ---
 
 <u><b>Visualisation of findings:</b></u>
 
-We can use seaborn and matplotlib to visualise each record to help make observations on. Visualisation is important because it allows us to see pattens in the data which we may not have noticed otherwise. It is also allows for a far more digestible medium to relay findings to people than a bunch of numbers.
+We can use seaborn and matplotlib to visualise each record to help make observations on. Visualisation is important because it allows us to see pattens in the data which we may not have noticed otherwise. It is also allows for a far more digestible medium to relay findings to people than a speadsheet of numbers.
 
 <u><b>Countplot </b></u>
 
@@ -213,13 +225,13 @@ We can use seaborn and matplotlib to visualise each record to help make observat
 </br>
 
 ![hist](Images\hist_petal_lenght.png)
-
 ![hist](Images\hist_petal_width.png)
 ![hist](Images\hist_sepal_lenght.png)
 ![hist](Images\hist_sepal_width.png)
 
 
-<h4>Above each variable is plotted on a histogram using seaborn. I used this to show how the three species differ in their anatomical features.
+<h4>Above each variable is plotted on a histogram using seaborn. I used this to show how the three species differ in their anatomical features. These unique values are grouped into ranges whic are refered to as bins. KDE (kernel density estimation) can be turned on or off by passing kde='False'. KDE is used to estimate <i>the distribution of observations in a dataset, analagous to a histogram</i>
+
 
 Some conclusions we can draw from this:
 <li>The iris-virginica has the widest sepal width</li>
@@ -269,6 +281,7 @@ From the heatmap we can conculde the there is a positive correlation between
 - petal width and sepal lenght 
 - petal lenght and petal width
 - sepal lenght and petal width
+- longer petals seem to equate to wider petal width
 
 We can investigate these correlations futher by using the individual dataframes for each species we created earlier. By using .corr() on each separately. 
 
@@ -279,8 +292,8 @@ The strongest correlation by far is the petal lenght and sepal lenght of the iri
 ___
 <h2><b><u>Clustermap:</u></b></h2>
 
-Another way we can visualise similarties is by using a clustermap. This is another matrix plot. A cluster map employs Hierarchical Clustering to cluster the rows and columns of the matrix. This means that it orders data by relationships and we can see where similarities lie.
-I personally found this particular plot difficult to decipher but, in the top half we can see that iris-setosa has distinct charecteristics while Viriginica and Versicolor are harder to distngusish and are thus sorted into the same clusters.
+Another way we can visualise these correlation similarties is by using a clustermap. This is another matrix plot. A cluster map employs hierarchical clustering to cluster the rows and columns of the matrix. This means that it orders data by relationships and we can see where similarities lie.
+I personally found this particular plot difficult to decipher at first but, we can see that iris-setosa has distinct charecteristics while Viriginica and Versicolor are harder to distngusish and are thus sorted into the same clusters.
 ![cluster map](Images\cluster_map.png)
 
 
@@ -292,7 +305,7 @@ I personally found this particular plot difficult to decipher but, in the top ha
 <h2><b><u>Conclusion</u></b></h2>
 I approached the analysis with the same intention of its original purpose - to be able to identify the different species of iris by the variants in characteristics (Petal length, petal width, sepal length and sepal width). From this analysis I have concluded that the petal is the most important variable when classifying the species of iris. It is easier to distinguish its dimensions between the species than that of the sepal. 
 <br></br>
-Overall, I learnt a lot by doing this project. I have never analysed a dataset before and was apprehensive about how to go about it. It is such a vast area and there are so many paths you could go with it, it can be overwhelming. I believe I have met the objectives of this project, which was to investigate the iris data set, analyse the data , create a python script to do this and document my findings in this README. 
+Overall, I learnt a lot by doing this project. I had no previous experince with analysing data or much programming experience and was apprehensive about how to go about it. It is such a vast area and there are so many paths you could go with it, it can be overwhelming. I believe I have met the objectives of this project, which was to investigate the iris data set, analyse the data , create a python script to do this and document my findings in this README. 
 I found using the data visualisation tools matplotlib and seaborn pivotal in helping me understand the data. It helped me see relationships between the data clearly. I can see why data visualisation is it’s own field and how important it is. I explored the styling libraries of these libraries to make visually pleasing plots, this is definitely an area I wish to explore more in the future. 
 This README was also something that was new to me. Learning how to format and make it appealing was something that took a bit of time and again is something I would like to develop in future projects, as it’s often the first file that is seen when you click into the repository on github so its an important first impression. 
 <br></br>
@@ -319,3 +332,4 @@ https://www.statisticshowto.com/probability-and-statistics/standard-deviation/#S
 https://books.google.ie/books?id=pQws07tdpjoC&printsec=frontcover&dq=what+is+hierarchical+clustering&hl=en&sa=X&ved=2ahUKEwiBspX3uNHvAhWMSxUIHW3UAoIQ6AEwBXoECAUQAg#v=onepage&q=what%20is%20hierarchical%20clustering&f=false
 http://www.nasonline.org/publications/biographical-memoirs/memoir-pdfs/anderson-edgar.pdf
 https://dl.acm.org/doi/10.1016/j.patcog.2007.07.022
+https://www.researchgate.net/publication/237010807_What_should_we_know_about_the_famous_Iris_data
