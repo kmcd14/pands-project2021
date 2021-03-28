@@ -58,11 +58,11 @@ print(df.describe(),'\n_________________________________________________________
 
 # Grouping species by mean, max and min values To futher look at this data
 mean_values = df.groupby('Species').mean() # Mean
-print('Mean Values: \r\n', mean_values)
+print('Mean Values: \r\n', mean_values,'\n______________________________________________________________________________')
 max_val = df.groupby('Species').max() # Max
-print('Max Values: \r\n', max_val)
+print('Max Values: \r\n', max_val,'\n______________________________________________________________________________')
 min_values = df.groupby('Species').min() #Min
-print('Min Values: \r\n', min_values)
+print('Min Values: \r\n', min_values,'\n______________________________________________________________________________')
 
 # Find the pairwise correlation of columns in the dataframe.
 # Using the whole dataframe
@@ -131,10 +131,8 @@ plt.show() # Show plot
 
 
 # Clustermap - another look at correlations and their relationships
-# Dropping the species column from a new dataframe named cluster. Clustermap kept throwing errors until this was removed as it couldn't read the string value
-cluster = df.drop('Species', axis=1)
 # (cluster dataframe, colourmap)
-sns.clustermap(cluster, cmap="Set3")
+cluster = sns.clustermap(df.corr(), cmap='plasma')
 plt.show() # Showing plot
 
 
