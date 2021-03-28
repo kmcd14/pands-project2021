@@ -19,7 +19,7 @@
 ---
 <br>
 <h3><b><u>Description</u></b></h3>
-This document is relating to pands-project2021 for programming and scripting module. The aim of this project is to research and investigate the well-know Fisher's Iris data set, doing so by writing documentation and python script to investigate the data. This README contains the complete documentation for the project. 
+This document is relating to pands-project2021 for programming and scripting module. The aim of this project is to research and investigate the well-know Fisher's Iris data set, doing so by writing documentation and python script to investigate the data. This README contains the complete documentation for the project. The python script is saved as analysis.py. PLease note that the each bit of code is labelled in the script and what it outputs by use of comments. 
 <br></br>
 
  <h4><u> Objectives and to do list: </u></h4>
@@ -313,10 +313,14 @@ To conclude, while having met the objectives of this project there is a lot of r
 
 -----
 </br>
+<h2><b><u>Andrews Curve</u></b></h2>
+While reseaching the various ways to visualise data. I came across Andrews curve and thought it could be an intresting addition to my analysis as it is a technique used for plotting multivariate data, which is what the iris data set is. Data with similar patterns will produce similar curves  and "...cases in a second group will have a different profile of values for the variables from those in the first group, and thus the curves
+produced for this second group will show a different pattern from those for the first group." [ref]. With this in mind, we can once again see how the iris-setosa is differs the most from the other two species.
 
+![cluster map](Images\andrews_curve.png)
 </br>
 
-
+---
 
 <h2><b><u>References</u></b></h2>
 https://pandas.pydata.org/docs/reference/api/pandas.read_csv.html
@@ -333,3 +337,5 @@ https://books.google.ie/books?id=pQws07tdpjoC&printsec=frontcover&dq=what+is+hie
 http://www.nasonline.org/publications/biographical-memoirs/memoir-pdfs/anderson-edgar.pdf
 https://dl.acm.org/doi/10.1016/j.patcog.2007.07.022
 https://www.researchgate.net/publication/237010807_What_should_we_know_about_the_famous_Iris_data
+https://core.ac.uk/download/pdf/1636958.pdf
+https://pandas.pydata.org/docs/reference/api/pandas.plotting.andrews_curves.html
