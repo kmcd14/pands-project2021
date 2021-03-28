@@ -93,7 +93,7 @@ The below image demostrates how to import the libraries used:
 
 <u><b>Seaborn</b></u> is based on matplotlib and is also used to create data visualisations. “It provides a high-level interface for drawing attractive and informative statistical graphics.” https://seaborn.pydata.org/
 
-<u><b>sys</b></u> provides numerous variables and functions to manipulate the python environment. This particular project asks for the script to return the output to a text file and not the terminal. To do this we can use stdout. Stdout is “a built-in file object that is analogous to the interpreter’s standard output stream in Python” [ref]. This output can be in any form such as a print statement.  Output can be of any form, it can be output from a print statement.  
+<u><b>sys</b></u> provides numerous variables and functions to manipulate the python environment. This particular project asks for the script to return the output to a text file and not the terminal. To do this we can use stdout. Stdout is “a built-in file object that is analogous to the interpreter’s standard output stream in Python” [ref]. This output can be in any form such as a print statement.  Output can be of any form, it can be output from a print statement.  https://docs.python.org/3/library/sys.html
 <br>
 
 Now that the modules are imported we can import the dataset.
@@ -112,12 +112,10 @@ Now that the modules are imported we can import the dataset.
     
     df.columns(['Sepal Lenght(cm)', 'Sepal Width(cm)', 'Petal Lenght(cm)', 'Petal Width(cm)', 'Species'])
 
-Separating Data
+<b>Separating Data</b>
 
   ![separating data](Images\separating_data.PNG)
 I have also decided to separating the iris data frame into smaller data frames comprising of each species. This will allow further investigation. 
-
-
 
 -----
 </br>
@@ -140,36 +138,68 @@ It is extremely important to close the file once finshed. Otherwise it will thro
 -----
 </br>
 <br>
-<h3><b><u>Data Overview</u></b></h3>
+<h3><b><u>Data Summary:</u></b></h3>
 
 ![overview](Images\overview.PNG)
 
 Getting an overview of the data using .info() to make sure it loaded correctly. This will return how many rows there are, column names, whether null and the type. We know there should be 150 rows and 5 columns from reseaching the data set.
 
 By using .head() we can get a brief look at our data. It will automatically return the first 5 rows but, you can see more or less by passing a number to it.
-*note: the '________' inculded in the print statement isn't part of the function. It's a personal decision tohelp make the formatting of the output to the text file clear by acting as a divider.
+
+*note: the '________' inculded in the print statement isn't part of the function. It's a personal decision to help make the formatting of the output to the text file clear by acting as a divider.
+
+<u><b>Cleaning Data</b></u>
 
 ![cleaning data](Images\cleaning_data.PNG)
 
-Checking the data for any null values
-Checking for duplicates and if there are any, which rows. 
+Here we are checking the data for any null values. We also can check for duplicates, and, if there are any, which rows.
+
 *note: by using .sum() will return the amount of null/duplicates.
 
 *note: This returned three duplicates, as we know this is a balanced dataset On this occasion I decided against removing them.
 
+---
+<u><b>Count</b></u>
+
+
 ![count](Images\count.PNG)
 
-Using .count() we can see how many instances of each unique species the data contains. From research we know it ahould be 50 of each.
+![count](Images\count_output.PNG)
+
+Using .count() we can see how many instances of each unique species the data contains. From research we know it ahould be 50 of each which there is.
+
+---
+
+<u><b>Stats</b></u>
 
 ![stat overview](Images\describe.PNG)
+![stat overview](Images\stats.PNG)
+
 Getting a summary of the dataframe values (count, mean,  standard deviation, min, percentile (25%, 50%, 75%), max).
-Standard Deviation: is a measure of how spread out the data is spread out around the Standard Deviation: is a measure of how spread out the data is spread out around the mean (average).  
+
+*note: Standard Deviation: is a measure of how spread out the data is spread out around the mean (average).  
+
+
+<u><b>Groupby:</b></u>
 
 ![mean groupby](Images\mean_groupby.PNG)
 
-We can take closer look at the mean values for each variable with groupby. To filter by column, pass .groupby() the column you want to sort by (‘Species’ in this case) and follow it by the aggregate function - e.g. min, max, mean, count - you wish to perform. In the above picture mean is used.
+We can take closer look at these values for each species with groupby function. To filter by column, pass .groupby() the column you want to sort by (‘Species’ in this case) and follow it by the aggregate function - e.g. min, max, mean, count - you wish to perform. In the above picture mean is used.
 
-<u>We can use seaborn and matplotlib to visualise each record to help make observations on. The following images are visualisations of the above findings:</u>
+![mean](Images\mean.PNG)
+
+![max](Images\max.PNG)
+
+![min](Images\min.PNG)
+
+
+---
+
+<u><b>Visualisation of findings:</b></u>
+
+We can use seaborn and matplotlib to visualise each record to help make observations on. Visualisation is important because it allows us to see pattens in the data which we may not have noticed otherwise. It is also allows for a far more digestible medium to relay findings to people than a bunch of numbers.
+
+<u><b>Countplot </b></u>
 
 ![countplot](Images\count_plot.png)
 
@@ -178,6 +208,9 @@ We can take closer look at the mean values for each variable with groupby. To fi
 
 -----
 <br>
+<u><b>Histogram</b></u>
+<br>
+</br>
 
 ![hist](Images\hist_petal_lenght.png)
 
@@ -187,25 +220,25 @@ We can take closer look at the mean values for each variable with groupby. To fi
 
 
 <h4>Above each variable is plotted on a histogram using seaborn. I used this to show how the three species differ in their anatomical features.
-This lines up with the mean values outputted
- 
-![mean](Images\mean.PNG)
 
 Some conclusions we can draw from this:
 <li>The iris-virginica has the widest sepal width</li>
 <li>The length of the iris-virginica sepal however is shorter than both the iris-setosa and versicolour which are both similar.</li>
- <li>The real telling difference comes  from the petal measurements; 
+ <li>The real telling difference comes from the petal measurements; 
  The iris-setosa is clearly distinguishable from the other two species. Being the outlier of the group and most likely to diverge from the average measurements.</li>
 
 ---
+<u><b>Scatterplot </b></u>
+
+Using a scatterplot we can plot the variable pairs i.e. Petal Lenght and Width, and Sepal Lenght and Width to get a clearer view of how the species differ.
 
 ![scatter sepal](Images\scatter_sepal.png)
 ![scatter petal](Images\scatter_petal.png) 
 
-<h4>Using a scatterplot to further look at how the variables differ. The sepal scatterplot isn’t that distinguishable. We can see that the iris-setosa is more likely to be wider on average but there's a lot of crossover between iris-versicolour and iris-virginica meaning that distinguishing one from the other solely on sepal variables wouldn’t be conclusive enough as there is a lot of overlap. 
+<h4>The sepal scatterplot isn’t that distinguishable. We can see that the iris-setosa is more likely to be wider on average but there's a lot of crossover between iris-versicolour and iris-virginica meaning that distinguishing one from the other solely on sepal variables wouldn’t be conclusive enough as there is a lot of overlap. 
 The Petal Scatterplot is a lot more conclusive and  tells us we can confidently identify the iris-setosa; it is more likely to be shorter in both petal length and width from the other two species. Although there is still some overlap, the iris-virginica is also more likely to have a wider and longer petal.
-
-Another way we can visualize the distribution of the data is by using box and violin plots.
+<br></br>
+Another way we can view and visualise this distribution of data is by a using a boxplot
 
 ![boxplot](Images\boxplot.png) 
 
@@ -215,18 +248,18 @@ Some observations:
 - Petal lenght is the longest which suggests it is the main variable which differes between species. 
 - The 4 sections of the box plot (lower quartile, upper quartile, inter quartile, whiskers) are uneven in size for each.  This shows that many flowers are similar but, vary much more in other areas such as the  upper whisker in both petal lenght and sepal lenght. 
 
-
-
 ----
-It is possible to do an overview of all these plots on one grid by using a pairplot. A pairplot graphs the pairwise relationships of the numerical columns for the whole dataframe. 
+<u><b>Pairplot</b></u>
+
+It is possible to do an overview of all these plots on one grid by using a pairplot. A pairplot graphs the pairwise relationships of the numerical columns for the whole dataframe. The pairplot is a good way to get a visual overview of the data and can be used to make instant relationship connections.
 
 ![pairplot](Images\pairplot.png)
 
-The pairplot is a good way to get a visual overview of the data. 
-
 ---
 
+<h2><b><u>Correlations:</u></b></h2>
 Using .corr() we can further investigate the correlations between the four variables. 
+
 ![corr](Images\correlations.PNG)
 
 To get a visual representation of these correlations we can use a matrix plots to create a heatmap. A matrix plots allows you to plot data as color-encoded matrices.
@@ -241,22 +274,16 @@ We can investigate these correlations futher by using the individual dataframes 
 
 ![separate corr](Images\separate_correlations.PNG)
 
-Looking at the species separetly isn't as clear. The strongest correlation by far is the petal lenght and sepal lenght of the iris-versicolor. Otherwise, there isn't any major correlation when viewing each species indivadually.
+Looking at the species separately the correlation isn't as clear. 
+The strongest correlation by far is the petal lenght and sepal lenght of the iris-versicolor. Otherwise, there isn't any major correlation when viewing each species individually.
 ___
 
 Another way we can visualise similarties is by using a clustermap. This is another matrix plot. A cluster map employs Hierarchical Clustering to cluster the rows and columns of the matrix. This means that it orders data by relationships and we can see where similarities lie.
+I personally found this particular plot difficult to decipher but, in the top half we can see that iris-setosa has distinct charecteristics while Viriginica and Versicolor are harder to distngusish and are thus sorted into the same clusters.
 ![cluster map](Images\cluster_map.png)
-We can see that iris-setosa has distinct charecteristics while Viriginica and Versicolor are harder to distngusish and are thus sorted into the same clusters.
-
-</br>
-<br>
-<h2><b><u>Seperating the data:</u></b></h2>
-
 
 
 </br>
-<br>
-<h2><b><u>Results</u></b></h2>
 
 -----
 </br>
@@ -268,11 +295,6 @@ We can see that iris-setosa has distinct charecteristics while Viriginica and Ve
 
 </br>
 
-<br>
-<h2><b><u>Acknowledgements</u></b></h2>
-
------
-</br>
 
 
 <h2><b><u>References</u></b></h2>
