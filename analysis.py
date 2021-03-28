@@ -85,6 +85,8 @@ plt.title('Number of Occurances', color='indigo') # Adding a title
 plt.show() # Showing the plot
 
 
+
+
 # Creating a histogram for each variable. 
 # (dataframe used, the variable, variable that will produce points with different colors (species), colour palette, kde turned off) 
 sns.displot(df, x='Petal Lenght(cm)', hue='Species', palette='Set3', kde=False)
@@ -135,7 +137,12 @@ plt.show() # Show plot
 cluster = sns.clustermap(df.corr(), cmap='plasma')
 plt.show() # Showing plot
 
-
+# Andrews Curve
+# (dataframe, column containing the class name, colourmap)
+andrews_curve = pd.plotting.andrews_curves(df,"Species",colormap='magma')
+plt.title('Andrews Curve') # Adding title
+plt.grid( color='black', lw=0.15, ls="--") # Styling grid
+plt.show() # Showing plot
 
 # Closing Iris Analysis File
 sys.stdout.close()
