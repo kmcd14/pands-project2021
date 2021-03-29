@@ -42,7 +42,10 @@
 ---
 <br>
 <h2><b><u><p id='Description'> Description</b></u></p></h2>
-This document is relating to pands-project2021 for programming and scripting module. The aim of this project is to research and investigate the well-know Fisher's Iris data set, doing so by writing documentation and python script to investigate the data. This README contains the complete documentation for the project. The python script is saved as analysis.py. PLease note that the each bit of code is labelled in the script and what it outputs by use of comments. 
+This document is relating to pands-project2021 for programming and scripting module. The aim of this project is to research and investigate the well-know Fisher's Iris data set, doing so by writing documentation and python script to investigate the data. 
+
+This README contains the complete documentation for the project. The python script is saved as analysis.py. PLease note that the each bit of code is labelled in the script and what it outputs by use of comments. 
+Python script, documentation, cvs file and images can be found at https://github.com/kmcd14/pands-project2021.
 <br></br>
 
  <h4><u> Objectives and to do list: </u></h4>
@@ -69,7 +72,7 @@ The iris dataset is one of the most popular data sets in the world. A simple goo
 </br>
 Although published by Fisher, the data was orignally collected by American botanist, Edgar Anderson.
 Anderson realised there was a <i>"great
-amount of genetic variation exists within most natural populations of plants."</i> This realisation led him to conculde <i>""if we are to learn anything about the ultimate nature of species
+amount of genetic variation exists within most natural populations of plants" </i>(Stebbins, G. L., 1978). This realisation led him to conculde <i>""if we are to learn anything about the ultimate nature of species
 we must reduce the problem to the simplest terms and study a few easily recognized, well differentiated species." </i>(Stebbins, G. L., 1978). This led him to study the three species of iris.
 
 
@@ -97,6 +100,8 @@ The three different species of iris recorded are; <b>Iris Setosa, Iris Versicolo
 
 <b><u>Visual Studio Code:</u></b> An open source coding editor. https://code.visualstudio.com/
 
+<b><u>GitHub:</u></b> is a code hosting platform for collaboration and version control. https://github.com/
+
 ---
 
 <br>
@@ -109,7 +114,7 @@ The below image demostrates how to import the libraries used:
 
 <u><b>Numpy</b></u> is a Python library used for working with arrays. It produces a narray object. Numpy arrays are faster and more efficient than using python lists. It does this by storing arrays in one place in memory, so they can be accessed and manipulated quickly http://www.numpy.org/
 
-<u><b>Pandas</b></u> is a data manipulation tool built on Numpy. It’s key structure is the dataframe. You can think of a dataframe as a spreadsheet or table but, dataframes as are more efficient and powerful and are an integral part of Python and Numpy [ref]. Pandas will allow us to select specific rows and columns within the dataframe. https://pandas.pydata.org/
+<u><b>Pandas</b></u> is a data manipulation tool built on Numpy. It’s key structure is the dataframe. You can think of a dataframe as a spreadsheet or table but, dataframes as are more efficient and powerful and are an integral part of Python and Numpy. Pandas will allow us to select specific rows and columns within the dataframe. https://pandas.pydata.org/
 
 <u><b>Mathplotlib</b></u> is a python library used to create plots, graphs, charts etc. https://matplotlib.org/
 
@@ -345,9 +350,15 @@ I personally found this particular plot difficult to decipher at first but, we c
 <h2><b><u>Conclusion</u></b></h2>
 I approached the analysis with the same intention of its original purpose - to be able to identify the different species of iris by the variants in characteristics (Petal length, petal width, sepal length and sepal width). From this analysis I have concluded that the petal is the most important variable when classifying the species of iris. It is easier to distinguish its dimensions between the species than that of the sepal. 
 <br></br>
-Overall, I learnt a lot by doing this project. I had no previous experince with analysing data or much programming experience and was apprehensive about how to go about it. It is such a vast area and there are so many paths you could go with it, it can be overwhelming. I believe I have met the objectives of this project, which was to investigate the iris data set, analyse the data , create a python script to do this and document my findings in this README. 
+
+Although, interestingly in my research, I came across a journal article which states that some botanists disagree about whether or not an iris actually has a sepal. It is amusing to think that such a famous and pivotal data set could potentially have contain such a large flaw. 
+Both petals and sepals are leaves which have adapted. 
+The debate lies in the fact that <i>“...the morphological distinction of perianthium and perigo-nium, or sepaloid and petaloid perigon is not clear”</i> (Kozak, M. & Łotocka, B., 2013). This is their molecular makeup. So while the iris data set is widely used in data science, statistics and machine learning it is nowhere near as important or impactful in the world of biotomy. 
+<br></br>
+Overall, I learnt a lot by doing this project. I had no previous experince with analysing data or much programming experience and was apprehensive about how to go about it. It is such a vast area and there are so many paths you could go with it, it can be overwhelming. I believe I have met the objectives of this project, which was to investigate the iris data set, analyse the data , create a python script to do this and document investigation.
 I found using the data visualisation tools matplotlib and seaborn pivotal in helping me understand the data. It helped me see relationships between the data clearly. I can see why data visualisation is it’s own field and how important it is. I explored the styling libraries of these libraries to make visually pleasing plots, this is definitely an area I wish to explore more in the future. 
-This README was also something that was new to me. Learning how to format and make it appealing was something that took a bit of time and again is something I would like to develop in future projects, as it’s often the first file that is seen when you click into the repository on github so its an important first impression. 
+
+This README was also something that was new to me. Learning how to format and make it appealing was something that took a bit of time and again is something I would like to develop in future projects, as it’s often the first file that is seen when you click into the repository on github so its an important first impression. Time management was an important factor for me too. Currently, I am working fulltime and have a number of other projects so setting my own deadlines and working towards them was vital.
 <br></br>
 To conclude, while having met the objectives of this project there is a lot of room for improvement. I think this project was very much finding my feet and becoming comfortable with using python and how it can be used to explore data. My personal goal going forward is to build on the base that I have gained doing this project and get deeper into python's capabilities and core concepts of data analysis and science. This only scratches the surface of what can be achieved but acted as a strong building block for my knowledge and confidence in analysing data.
 
@@ -362,6 +373,8 @@ GeeksforGeeks. (2021). Python sys Module. Available: https://www.geeksforgeeks.o
 Han, J., Pei, J., Kamber, M (2011). Data Mining: Concepts and Techniques. 3rd ed. Massachusetts: Elsevier. 457-458.
 
 kite.com. (2021). How to redirect print output to a text file in Python. Available: https://www.kite.com/python/answers/how-to-redirect-print-output-to-a-text-file-in-python. Last accessed 16th March 2021.
+
+Kozak, M. & Łotocka, B. (2013). What should we know about the famous Iris data?. Current Science. 104 (5), p579-580.
 
 learnpython.org. (2021). Pandas Basics. Available: https://www.learnpython.org/en/Pandas_Basics. Last accessed 17th March 2021.
 
@@ -378,7 +391,6 @@ seaborn.org. (2021). Visualizing distributions of data. Available: https://seabo
 Solomon, B. (2021). Pandas GroupBy: Your Guide to Grouping Data in Python. Available: https://realpython.com/pandas-groupby/. Last accessed 24th March 2021.
 
 Spencer, N.H. (2003). Investigating Data With Andrews Plots. Social Science Computer Review. 21 (2), p244-249.
-Kozak, M. & Łotocka, B. (2013). What should we know about the famous Iris data?. Current Science. 104 (5), p579-580.
 
 Stebbins, G. L. (1978). Edgar Anderson: November 9, 1897-June 18, 1969. Washington D.C.: National Academy of Sciences. 5.
 
