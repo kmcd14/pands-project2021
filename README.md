@@ -4,7 +4,7 @@
 
 
 <br>
-<h3 style=color:#DDA0DD><b><u>Table of Contents</b></u></h3></summary>
+<h2 style=color:#DDA0DD><b><u>Table of Contents</b></u></h2></summary>
   <ol>
     <li><a href='#Description'> Description</a></li>
     <li><a href='#Iris'> What Is the Iris DataSet?</a></li>
@@ -41,7 +41,7 @@
 ---
 ---
 <br>
-<b><u><p id='Description'> Description</b></u></p>
+<h2><b><u><p id='Description'> Description</b></u></p></h2>
 This document is relating to pands-project2021 for programming and scripting module. The aim of this project is to research and investigate the well-know Fisher's Iris data set, doing so by writing documentation and python script to investigate the data. This README contains the complete documentation for the project. The python script is saved as analysis.py. PLease note that the each bit of code is labelled in the script and what it outputs by use of comments. 
 <br></br>
 
@@ -60,38 +60,34 @@ This document is relating to pands-project2021 for programming and scripting mod
 
 -----
 </br>
-<br>
-<b><u><p id='Iris'>What Is The Iris DataSet?</b></u></p>
-
+<h3><b><u><p id='Iris'>What Is The Iris DataSet?</b></u></p></h3>
 
 The iris dataset is one of the most popular data sets in the world. A simple google alone generates almost 702,000 results. It is famous among scientists. It has been used to illustrate a variety of techniques such as pattern recongition, multivariate statistics, machine learning and data visualisation. 
 1
-<i>Fisher's Iris data</i> otherwise known as <i>The Iris flower data set</i> is a multivariate data set. This means the dataset involves more than one variable.[ref]  published by the British statistician, eugenicist, and biologist Ronald Fisher in his 1936 paper <i>The use of multiple measurements in taxonomic problems as an example of linear discriminant analysis</i> [1].
+<i>Fisher's Iris data</i> otherwise known as <i>The Iris flower data set</i> is a multivariate data set. This means the dataset involves more than one variable.[ref]  published by the British statistician, eugenicist, and biologist Ronald Fisher in his 1936 paper <i>The use of multiple measurements in taxonomic problems as an example of linear discriminant analysis</i> (Kozak, M. & Łotocka, B., 2013).
 <br>
 </br>
 Although published by Fisher, the data was orignally collected by American botanist, Edgar Anderson.
 Anderson realised there was a <i>"great
 amount of genetic variation exists within most natural populations of plants."</i> This realisation led him to conculde <i>""if we are to learn anything about the ultimate nature of species
-we must reduce the problem to the simplest terms and study a few easily recognized, well differentiated species." </i>. [ref]. This led him to study the three species of iris.
+we must reduce the problem to the simplest terms and study a few easily recognized, well differentiated species." </i>(Stebbins, G. L., 1978). This led him to study the three species of iris.
 
 
 The dataset contains 150 records with each row representing a species of iris flower. Each sample is divided under five columns. - Sepal Length, Sepal Width, Petal Length and Petal Width all in centimeters and the fifth column being the class/species of Iris. 
-The samples where collected on the same day, in the same area, by the same person and measured with the sae appuratus at the same time to ensure justness. [ref wiki]. Fisher used a linear discriminant analysis (LDA) on the data set. That is <i>"...a dimension reduction method which finds an optimal linear transformation that maximizes the class separability."</i> [ref]i.e. be able to separate between the classes of iris'. 
-<br>
+The samples where collected on the same day, in the same area, by the same person and measured with the sae appuratus at the same time to ensure justness (Wikipedia, 2021). Fisher used a linear discriminant analysis (LDA) on the data set. That is <i>"...a dimension reduction method which finds an optimal linear transformation that maximizes the class separability."</i> (Park, C.H., Park. H., 2008). i.e. be able to separate between the classes of iris'. 
+<br></br>
 The three different species of iris recorded are; <b>Iris Setosa, Iris Versicolour and Iris Virginica.</b>
-
-
 
 ![Species of Iris](https://miro.medium.com/max/2000/1*nfK3vGZkTa4GrO7yWpcS-Q.png)
 
-
-
-
+(Medium, Image ref)
 
 ----
 </br>
-<b><u><p id='Technologies_Used'> Technologies Used:</b></u></p>
- The data set was downloaded from the Center for Machine Learning and Intelligent Systems repository found here: https://archive.ics.uci.edu/ml/datasets/iris
+
+<h3><b><u><p id='Technologies_Used'> Technologies Used:</b></u></p></h3>
+
+ The <b><u>data set</b></u> was downloaded from the Center for Machine Learning and Intelligent Systems repository found here: https://archive.ics.uci.edu/ml/datasets/iris
 
 <b><u>Google Docs:</u></b> an online word processor used to write my documentation before transfering into this README file. https://www.google.com/docs/about/
 
@@ -104,7 +100,7 @@ The three different species of iris recorded are; <b>Iris Setosa, Iris Versicolo
 ---
 
 <br>
-<b><u><p id='Libraries_Used'>Libraries Used:</b></u></p>
+<h3><b><u><p id='Libraries_Used'>Libraries Used:</b></u></p></h3>
 
 
 The below image demostrates how to import the libraries used:
@@ -119,17 +115,18 @@ The below image demostrates how to import the libraries used:
 
 <u><b>Seaborn</b></u> is based on matplotlib and is also used to create data visualisations. “It provides a high-level interface for drawing attractive and informative statistical graphics.” https://seaborn.pydata.org/
 
-<u><b>sys</b></u> provides numerous variables and functions to manipulate the python environment. This particular project asks for the script to return the output to a text file and not the terminal. To do this we can use stdout. Stdout is “a built-in file object that is analogous to the interpreter’s standard output stream in Python” [ref]. This output can be in any form such as a print statement.  Output can be of any form, it can be output from a print statement.  https://docs.python.org/3/library/sys.html
+<u><b>sys</b></u> provides numerous variables and functions to manipulate the python environment. This particular project asks for the script to return the output to a text file and not the terminal. To do this we can use stdout. Stdout is “a built-in file object that is analogous to the interpreter’s standard output stream in Python”. This output can be in any form such as a print statement.  Output can be of any form, it can be output from a print statement.  https://docs.python.org/3/library/sys.html
 <br>
+
+---
+
+<h3><b><u><p id='Importing_Data'>Importing Data Set:</b></u></p></h3>
 
 Now that the modules are imported we can import the dataset.
-
-<br>
-<b><u><p id='Importing_Data'>Importing Data set:</b></u></p>
-
 <ul>
   <li>Download the dataset from UCI repository.</li>
-  <li>Import the dataset into python as a csv file using the pandas module. As the dataset contains no heading the name parameter can be used to include them. Without inserting column headings the data would only return 149 rows instead of 150 as pandas will automatically use the first row as a header if none is specified </li>
+  <li>Import the dataset into python as a csv file using the pandas module. As the dataset contains no heading the name parameter can be used to include them. Without inserting column headings the data would only return 149 rows instead of 150 as pandas will automatically use the first row as a header if none is specified (pandas.org, 2021).
+  </li>
   
   ![importing data](Images\importing_data.PNG)
  
@@ -138,21 +135,21 @@ Now that the modules are imported we can import the dataset.
  
     
     df.columns(['Sepal Lenght(cm)', 'Sepal Width(cm)', 'Petal Lenght(cm)', 'Petal Width(cm)', 'Species'])
-
-<b>Separating Data</b>
+---
+<h3><u><b>Separating Data</b></u></h3>
 
   ![separating data](Images\separating_data.PNG)
-I have also decided to separating the iris data frame into smaller data frames comprising of each species. This will allow further investigation. 
+I have also decided to separating the iris data frame into smaller data frames comprising of each species. This will allow for further investigation (learnpython.org, 2021)
 
 -----
 </br>
-<b><u><p id='Text_File'>Creating A Text File For Output</b></u></p>
+<h3><b><u><p id='Text_File'>Creating A Text File For Output</b></u></p></h3>
 
-To create the text file for our analysis to be outputted to we do the following:
+To create the text file for our analysis to be outputted to we do the following (GeeksforGeeks, 2021):
 
 ![creating a text file](Images\creating_text_file.PNG)
 This automatically creates a new text file called Iris Analysis.
-The 'w' means write to this file. When finished with the investigation I will change this to 'r' to read the file only.
+The 'w' means write to this file.
 
 ![text file](Images\text_file.PNG)
 
@@ -160,14 +157,15 @@ The text file is now created and visable within the project folder in the leftha
 
 ![closing text file](Images\closing_text_file.PNG)
 
-It is extremely important to close the file once finshed. Otherwise it will throw a host of problems. Make sure to put the above statement at the end of your code.
+It is extremely important to close the file once finshed. Otherwise it will throw a host of problems. Make sure to put the above statement at the end of your code (kite.com, 2021).
 
 -----
 </br>
+<h2><b><u><p id='Data_Summary'>Data Summary</b></u></p></h2>
 <br>
-<b><u><p id='Data_Summary'>Data Summary:</b></u></p>
 
 ![overview](Images\overview.PNG)
+<br>
 
 ![overview output](Images\overview_output.PNG)
 
@@ -180,7 +178,7 @@ By using .head() we can get a brief look at our data. It will automatically retu
 *note: the '________' inculded in the print statement isn't part of the function. It's a personal decision to help make the formatting of the output to the text file clear by acting as a divider.
 
 ---
-<b><u><p id='Cleaning_Data'>Cleaning Data</b></u></p>
+<h3><b><u><p id='Cleaning_Data'>Cleaning Data</b></u></p></h3>
 
 
 ![cleaning data](Images\cleaning_data.PNG)
@@ -196,7 +194,7 @@ As we can see there is no null values in this dataset but there are 3 duplicates
 *note: This returned three duplicates, as we know this is a balanced dataset On this occasion I decided against removing them.
 
 ---
-<b><u><p id='Count'>Count</b></u></p>
+<h3><b><u><p id='Count'>Count</b></u></p></h3>
 
 
 ![count](Images\count.PNG)
@@ -206,23 +204,25 @@ As we can see there is no null values in this dataset but there are 3 duplicates
 Using .count() we can see how many instances of each unique species the data contains. From research we know it ahould be 50 of each which there is.
 
 ---
-<b><u><p id='Stats'>Stats</b></u></p>
+<h3><b><u><p id='Stats'>Stats</b></u></p></h3>
 
 ![stat overview](Images\describe.PNG)
 ![stat overview](Images\stats.PNG)
 
 Getting a summary of the dataframe values (count, mean,  standard deviation, min, percentile (25%, 50%, 75%), max).
 
-*note: Standard Deviation: is a measure of how spread out the data is spread out around the mean (average).  
+*note: Standard Deviation: is a measure of how spread out the data is spread out around the mean (average). (Glen, S., 2021). 
+
+ 
 
 ---
 
-<b><u><p id='Groupby'>Groupby</b></u></p>
+<h3><b><u><p id='Groupby'>Groupby</b></u></p></h3>
 
 
 ![mean groupby](Images\mean_groupby.PNG)
 
-We can take closer look at these values for each species with groupby function. To filter by column, pass .groupby() the column you want to sort by (‘Species’ in this case) and follow it by the aggregate function - e.g. min, max, mean, count - you wish to perform. In the above code mean is used.
+We can take closer look at these values for each species with groupby function. To filter by column, pass .groupby() the column you want to sort by (‘Species’ in this case) and follow it by the aggregate function - e.g. min, max, mean, count - you wish to perform. In the above code mean is used. (Solomon, B., 2021)
 
 ![mean](Images\mean.PNG)
 
@@ -230,18 +230,17 @@ We can take closer look at these values for each species with groupby function. 
 
 ![min](Images\min.PNG)
 
-
 <h4>Observations: 
 From this we can see that iris-setosa varies a lot more than the other two when it comes to petal attributes. It also seems to on average have a wider sepal than iris-versicolour and iris-virginica.
 It also looks like there may be a link between the sepal and petal lenght of the iris-virginica. <h4>
 
 ---
-<b><u><p id='Data Visualisation'>Data Visualisation:</b></u></p>
+<h2><b><u><p id='Data Visualisation'>Data Visualisation:</b></u></p></h2>
 
 We can use seaborn and matplotlib to visualise each record to help make observations on. Visualisation is important because it allows us to see pattens in the data which we may not have noticed otherwise. It is also allows for a far more digestible medium to relay findings to people than a speadsheet of numbers.
 
 ---
-<b><u><p id='Countplot'>Countplot</b></u></p>
+<h3><b><u><p id='Countplot'>Countplot</b></u></p></h3>
 
 ![countplot](Images\count_plot.png)
 
@@ -250,7 +249,7 @@ We can use seaborn and matplotlib to visualise each record to help make observat
 
 -----
 <br>
-<b><u><p id='Histogram'>Histogram</b></u></p>
+<h3><b><u><p id='Histogram'>Histogram</b></u></p></h3>
 
 ![hist](Images\hist_petal_lenght.png)
 ![hist](Images\hist_petal_width.png)
@@ -258,7 +257,7 @@ We can use seaborn and matplotlib to visualise each record to help make observat
 ![hist](Images\hist_sepal_width.png)
 
 
-<h4>Above each variable is plotted on a histogram using seaborn. I used this to show how the three species differ in their anatomical features. These unique values are grouped into ranges whic are refered to as bins. KDE (kernel density estimation) can be turned on or off by passing kde='False'. KDE is used to estimate <i>the distribution of observations in a dataset, analagous to a histogram</i>
+<h4>Above each variable is plotted on a histogram using seaborn. I used this to show how the three species differ in their anatomical features. These unique values are grouped into ranges whic are refered to as bins. KDE (kernel density estimation) can be turned on or off by passing kde='False'. KDE is used to estimate <i>the distribution of observations in a dataset, analagous to a histogram</i> (Seaborn.org, 2021)
 
 
 Some conclusions we can draw from this:
@@ -268,7 +267,7 @@ Some conclusions we can draw from this:
  The iris-setosa is clearly distinguishable from the other two species. Being the outlier of the group and most likely to diverge from the average measurements.</li>
 
 ---
-<b><u><p id='Scatterplot'>Scatterplot</b></u></p>
+<h3><b><u><p id='Scatterplot'>Scatterplot</b></u></p></h3>
 
 Using a scatterplot we can plot the variable pairs i.e. Petal Lenght and Width, and Sepal Lenght and Width to get a clearer view of how the species differ.
 
@@ -279,7 +278,7 @@ Using a scatterplot we can plot the variable pairs i.e. Petal Lenght and Width, 
 The Petal Scatterplot is a lot more conclusive and  tells us we can confidently identify the iris-setosa; it is more likely to be shorter in both petal length and width from the other two species. Although there is still some overlap, the iris-virginica is also more likely to have a wider and longer petal.
 <br></br>
 
-<b><u><p id='Boxplot'>Boxplot</b></u></p>
+<h3><b><u><p id='Boxplot'>Boxplot</b></u></p></h3>
 Another way we can view and visualise this distribution of data is by a using a boxplot
 
 
@@ -292,7 +291,7 @@ Some observations:
 - The 4 sections of the box plot (lower quartile, upper quartile, inter quartile, whiskers) are uneven in size for each.  This shows that many flowers are similar but, vary much more in other areas such as the  upper whisker in both petal lenght and sepal lenght. 
 
 ----
-<b><u><p id='Pairplot'>Pairplot</b></u></p>
+<h3><b><u><p id='Pairplot'>Pairplot</b></u></p></h3>
 
 It is possible to do an overview of all these plots on one grid by using a pairplot. A pairplot graphs the pairwise relationships of the numerical columns for the whole dataframe. The pairplot is a good way to get a visual overview of the data and can be used to make instant relationship connections.
 
@@ -300,15 +299,15 @@ It is possible to do an overview of all these plots on one grid by using a pairp
 
 ---
 </br>
-<b><u><p id='Andrews_Curve'>Andrews Curve</b></u></p>
+<h3><b><u><p id='Andrews_Curve'>Andrews Curve</b></u></p></h3>
 
-While reseaching the various ways to visualise data. I came across Andrews curve and thought it could be an intresting addition to my analysis as it is a technique used for plotting multivariate data, which is what the iris data set is. Data with similar patterns will produce similar curves  and "...cases in a second group will have a different profile of values for the variables from those in the first group, and thus the curves produced for this second group will show a different pattern from those for the first group." [ref]. With this in mind, we can once again see how the iris-setosa is differs the most from the other two species.
+While reseaching the various ways to visualise data. I came across Andrews curve and thought it could be an intresting addition to my analysis as it is a technique used for plotting multivariate data, which is what the iris data set is. Data with similar patterns will produce similar curves  and "...cases in a second group will have a different profile of values for the variables from those in the first group, and thus the curves produced for this second group will show a different pattern from those for the first group" (Spencer, N.H., 2003). With this in mind, we can once again see how the iris-setosa is differs the most from the other two species (pandas.org, 2021).
 
 ![andrews curve](Images\andrews_curve.png)
 </br>
 
 ---
-<b><u><p id='Correlations'>Correlations</b></u></p>
+<h3><b><u><p id='Correlations'>Correlations</b></u></p></h3>
 
 Using .corr() we can further investigate the correlations between the four variables. 
 
@@ -330,10 +329,10 @@ We can investigate these correlations futher by using the individual dataframes 
 Looking at the species separately the correlation isn't as clear. 
 The strongest correlation by far is the petal lenght and sepal lenght of the iris-versicolor. Otherwise, there isn't any major correlation when viewing each species individually.
 ___
-<b><u><p id='Clustermap'>Clustermap:</b></u></p>
+<h3><b><u><p id='Clustermap'>Clustermap:</b></u></p></h3>
 
 
-Another way we can visualise these correlation similarties is by using a clustermap. This is another matrix plot. A cluster map employs hierarchical clustering to cluster the rows and columns of the matrix. This means that it orders data by relationships and we can see where similarities lie.
+Another way we can visualise these correlation similarties is by using a clustermap. This is another matrix plot. A cluster map employs hierarchical clustering to cluster the rows and columns of the matrix. This means that it orders data by relationships and we can see where similarities lie (Han, J., Pei, J., Kamber, M., 2011). Data Mining: Concepts and Techniques. 3rd ed. Massachusetts: Elsevier. 457-458.
 I personally found this particular plot difficult to decipher at first but, we can see that iris-setosa has distinct charecteristics while Viriginica and Versicolor are harder to distngusish and are thus sorted into the same clusters.
 ![cluster map](Images\cluster_map.png)
 
@@ -356,20 +355,31 @@ To conclude, while having met the objectives of this project there is a lot of r
 
 
 ---
-<b><u><p id='References'>References</b></u></p>
-https://pandas.pydata.org/docs/reference/api/pandas.read_csv.html
-https://www.kite.com/python/answers/how-to-redirect-print-output-to-a-text-file-in-python
-https://data36.com/plot-histogram-python-pandas/
-https://miro.medium.com/max/2000/1*nfK3vGZkTa4GrO7yWpcS-Q.png
-https://www.learnpython.org/en/Pandas_Basics
-https://numpy.org/doc/stable/user/whatisnumpy.html
-https://seaborn.pydata.org/#:~:text=Seaborn%20is%20a%20Python%20data,attractive%20and%20informative%20statistical%20graphics.
-https://www.geeksforgeeks.org/python-sys-module/#:~:text=The%20sys%20module%20in%20Python,interact%20strongly%20with%20the%20interpreter.
-https://realpython.com/pandas-groupby/
-https://www.statisticshowto.com/probability-and-statistics/standard-deviation/#SDD
-https://books.google.ie/books?id=pQws07tdpjoC&printsec=frontcover&dq=what+is+hierarchical+clustering&hl=en&sa=X&ved=2ahUKEwiBspX3uNHvAhWMSxUIHW3UAoIQ6AEwBXoECAUQAg#v=onepage&q=what%20is%20hierarchical%20clustering&f=false
-http://www.nasonline.org/publications/biographical-memoirs/memoir-pdfs/anderson-edgar.pdf
-https://dl.acm.org/doi/10.1016/j.patcog.2007.07.022
-https://www.researchgate.net/publication/237010807_What_should_we_know_about_the_famous_Iris_data
-https://core.ac.uk/download/pdf/1636958.pdf
-https://pandas.pydata.org/docs/reference/api/pandas.plotting.andrews_curves.html
+<h2><b><u><p id='References'>References</b></u></p></h2>
+
+GeeksforGeeks. (2021). Python sys Module. Available: https://www.geeksforgeeks.org/python-sys-module/#:~:text=The%20sys%20module%20in%20Python,interact%20strongly%20with%20the%20interpreter. Last accessed 15th March 2021.
+
+Han, J., Pei, J., Kamber, M (2011). Data Mining: Concepts and Techniques. 3rd ed. Massachusetts: Elsevier. 457-458.
+
+kite.com. (2021). How to redirect print output to a text file in Python. Available: https://www.kite.com/python/answers/how-to-redirect-print-output-to-a-text-file-in-python. Last accessed 16th March 2021.
+
+learnpython.org. (2021). Pandas Basics. Available: https://www.learnpython.org/en/Pandas_Basics. Last accessed 17th March 2021.
+
+Medium, Image ref: https://miro.medium.com/max/2000/1*nfK3vGZkTa4GrO7yWpcS-Q.png
+
+Park, C.H., Park. H. (2008). A comparison of generalized linear discriminant analysis algorithms. Pattern Recognition. 41 (3), 1083-1097.
+
+pandas.org. (2021). pandas.read_csv. Available: https://pandas.pydata.org/docs/reference/api/pandas.read_csv.html. Last accessed 16th March 2021.
+
+pandas.org. (2021). pandas.plotting.andrews_curves. Available: https://pandas.pydata.org/docs/reference/api/pandas.plotting.andrews_curves.html. Last accessed 28th March 2021.
+
+seaborn.org. (2021). Visualizing distributions of data. Available: https://seaborn.pydata.org/tutorial/distributions.html. Last accessed 20th March 2021.
+
+Solomon, B. (2021). Pandas GroupBy: Your Guide to Grouping Data in Python. Available: https://realpython.com/pandas-groupby/. Last accessed 24th March 2021.
+
+Spencer, N.H. (2003). Investigating Data With Andrews Plots. Social Science Computer Review. 21 (2), p244-249.
+Kozak, M. & Łotocka, B. (2013). What should we know about the famous Iris data?. Current Science. 104 (5), p579-580.
+
+Stebbins, G. L. (1978). Edgar Anderson: November 9, 1897-June 18, 1969. Washington D.C.: National Academy of Sciences. 5.
+
+Wikipedia. (2021). Iris Flower Data Set. Available: https://en.wikipedia.org/wiki/Iris_flower_data_set. Last accessed 15th March 2021.
