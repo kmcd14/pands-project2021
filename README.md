@@ -6,19 +6,42 @@
 <br>
 <h3 style=color:#DDA0DD><b><u>Table of Contents</b></u></h3></summary>
   <ol>
-    <li><a href="#Overview"> Overview</a></li>
-    <li><a href="#iris">What Is the Iris DataSet?</a></li>
-    <li><a href="#modules used">Modules Used</a></li>
-    <li><a href="#results">Results</a></li>
-    <li><a href="#conclusion">Conclusion</a></li>
-    <li><a href="#acknowledgements">Acknowledgements</a></li>
+    <li><a href='#Description'> Description</a></li>
+    <li><a href='#Iris'> What Is the Iris DataSet?</a></li>
+    
+  <li><a href='#Technologies_Used'>Technologies Used</a></li>
+    <li><a href="#Libraries_Used">Libraries Used</a></li>
+    <li><a href="#Importing_Data">Importing The Data Set</a></li>
+    <li><a href="#Text_File">Creating A Text File For Output</a></li>
+    <li><a href="#Data_Analysis">Data Analysis</a></li>
+      <ul>
+        <li><a href="#Cleaning_Data">Cleaning Data</a></li>
+        <li><a href="#Data_Summary">Data Summary</a></li>
+        <li><a href="#Count">Count</a></li>
+        <li><a href="#Stats">Stats</a></li>
+        <li><a href="#Groupby">Groupby</a></li>
+      </ul>
+
+ <li><a href="#Visualisation">Data Visualisation</a></li>
+  <ul>
+      <li><a href="#Countplot">Countplot</a></li>
+      <li><a href="#Histogram">Histogram</a></li>
+      <li><a href="#Scatterplot">Scatterplot</a></li>
+      <li><a href="#Boxplot">Boxplot</a></li>
+      <li><a href="#Scatterplot">Scatterplot</a></li>
+      <li><a href="#Pairplot">Pairplot</a></li>
+      <li><a href="#Andrews_Curve">Andrews Curve</a></li>
+      <li><a href="#Correlations">Correlations</a></li>
+      <li><a href="#Clustermap">Clustermap</a></li>
+    </ul>
+    <li><a href="#Conclusion">Conclusion</a></li>  
     <li><a href="#References">References</a></li>
   </ol>
   
 ---
 ---
 <br>
-<h3><b><u>Description</u></b></h3>
+<b><u><p id='Description'> Description</b></u></p>
 This document is relating to pands-project2021 for programming and scripting module. The aim of this project is to research and investigate the well-know Fisher's Iris data set, doing so by writing documentation and python script to investigate the data. This README contains the complete documentation for the project. The python script is saved as analysis.py. PLease note that the each bit of code is labelled in the script and what it outputs by use of comments. 
 <br></br>
 
@@ -38,7 +61,8 @@ This document is relating to pands-project2021 for programming and scripting mod
 -----
 </br>
 <br>
-<h3><b><u>What Is The Iris DataSet?</u></b></h3>
+<b><u><p id='Iris'>What Is The Iris DataSet?</b></u></p>
+
 
 The iris dataset is one of the most popular data sets in the world. A simple google alone generates almost 702,000 results. It is famous among scientists. It has been used to illustrate a variety of techniques such as pattern recongition, multivariate statistics, machine learning and data visualisation. 
 1
@@ -66,8 +90,8 @@ The three different species of iris recorded are; <b>Iris Setosa, Iris Versicolo
 
 ----
 </br>
-<h3><b><u>Technologies Used:</u></b></h3>
-<b><u>Iris Data Set:</u></b> The data set was downloaded from the Center for Machine Learning and Intelligent Systems repository found here: https://archive.ics.uci.edu/ml/datasets/iris
+<b><u><p id='Technologies_Used'> Technologies Used:</b></u></p>
+ The data set was downloaded from the Center for Machine Learning and Intelligent Systems repository found here: https://archive.ics.uci.edu/ml/datasets/iris
 
 <b><u>Google Docs:</u></b> an online word processor used to write my documentation before transfering into this README file. https://www.google.com/docs/about/
 
@@ -77,9 +101,11 @@ The three different species of iris recorded are; <b>Iris Setosa, Iris Versicolo
 
 <b><u>Visual Studio Code:</u></b> An open source coding editor. https://code.visualstudio.com/
 
+---
 
 <br>
-<h3><b><u>Libraries Used</u></b></h3>
+<b><u><p id='Libraries_Used'>Libraries Used:</b></u></p>
+
 
 The below image demostrates how to import the libraries used:
 
@@ -99,7 +125,8 @@ The below image demostrates how to import the libraries used:
 Now that the modules are imported we can import the dataset.
 
 <br>
-<h2><b><u>Import the dataset:</u></b></h2>
+<b><u><p id='Importing_Data'>Importing Data set:</b></u></p>
+
 <ul>
   <li>Download the dataset from UCI repository.</li>
   <li>Import the dataset into python as a csv file using the pandas module. As the dataset contains no heading the name parameter can be used to include them. Without inserting column headings the data would only return 149 rows instead of 150 as pandas will automatically use the first row as a header if none is specified </li>
@@ -119,8 +146,8 @@ I have also decided to separating the iris data frame into smaller data frames c
 
 -----
 </br>
-<br>
-<h3><b><u>Creating a text file for output</u></b></h3>
+<b><u><p id='Text_File'>Creating A Text File For Output</b></u></p>
+
 To create the text file for our analysis to be outputted to we do the following:
 
 ![creating a text file](Images\creating_text_file.PNG)
@@ -138,7 +165,7 @@ It is extremely important to close the file once finshed. Otherwise it will thro
 -----
 </br>
 <br>
-<h3><b><u>Data Summary:</u></b></h3>
+<b><u><p id='Data_Summary'>Data Summary:</b></u></p>
 
 ![overview](Images\overview.PNG)
 
@@ -152,7 +179,9 @@ By using .head() we can get a brief look at our data. It will automatically retu
 
 *note: the '________' inculded in the print statement isn't part of the function. It's a personal decision to help make the formatting of the output to the text file clear by acting as a divider.
 
-<u><b>Cleaning Data</b></u>
+---
+<b><u><p id='Cleaning_Data'>Cleaning Data</b></u></p>
+
 
 ![cleaning data](Images\cleaning_data.PNG)
 
@@ -167,7 +196,7 @@ As we can see there is no null values in this dataset but there are 3 duplicates
 *note: This returned three duplicates, as we know this is a balanced dataset On this occasion I decided against removing them.
 
 ---
-<u><b>Count</b></u>
+<b><u><p id='Count'>Count</b></u></p>
 
 
 ![count](Images\count.PNG)
@@ -177,8 +206,7 @@ As we can see there is no null values in this dataset but there are 3 duplicates
 Using .count() we can see how many instances of each unique species the data contains. From research we know it ahould be 50 of each which there is.
 
 ---
-
-<u><b>Stats</b></u>
+<b><u><p id='Stats'>Stats</b></u></p>
 
 ![stat overview](Images\describe.PNG)
 ![stat overview](Images\stats.PNG)
@@ -187,8 +215,10 @@ Getting a summary of the dataframe values (count, mean,  standard deviation, min
 
 *note: Standard Deviation: is a measure of how spread out the data is spread out around the mean (average).  
 
+---
 
-<u><b>Groupby:</b></u>
+<b><u><p id='Groupby'>Groupby</b></u></p>
+
 
 ![mean groupby](Images\mean_groupby.PNG)
 
@@ -206,12 +236,12 @@ From this we can see that iris-setosa varies a lot more than the other two when 
 It also looks like there may be a link between the sepal and petal lenght of the iris-virginica. <h4>
 
 ---
-
-<u><b>Visualisation of findings:</b></u>
+<b><u><p id='Data Visualisation'>Data Visualisation:</b></u></p>
 
 We can use seaborn and matplotlib to visualise each record to help make observations on. Visualisation is important because it allows us to see pattens in the data which we may not have noticed otherwise. It is also allows for a far more digestible medium to relay findings to people than a speadsheet of numbers.
 
-<u><b>Countplot </b></u>
+---
+<b><u><p id='Countplot'>Countplot</b></u></p>
 
 ![countplot](Images\count_plot.png)
 
@@ -220,9 +250,7 @@ We can use seaborn and matplotlib to visualise each record to help make observat
 
 -----
 <br>
-<u><b>Histogram</b></u>
-<br>
-</br>
+<b><u><p id='Histogram'>Histogram</b></u></p>
 
 ![hist](Images\hist_petal_lenght.png)
 ![hist](Images\hist_petal_width.png)
@@ -240,7 +268,7 @@ Some conclusions we can draw from this:
  The iris-setosa is clearly distinguishable from the other two species. Being the outlier of the group and most likely to diverge from the average measurements.</li>
 
 ---
-<u><b>Scatterplot </b></u>
+<b><u><p id='Scatterplot'>Scatterplot</b></u></p>
 
 Using a scatterplot we can plot the variable pairs i.e. Petal Lenght and Width, and Sepal Lenght and Width to get a clearer view of how the species differ.
 
@@ -250,7 +278,10 @@ Using a scatterplot we can plot the variable pairs i.e. Petal Lenght and Width, 
 <h4>The sepal scatterplot isn’t that distinguishable. We can see that the iris-setosa is more likely to be wider on average but there's a lot of crossover between iris-versicolour and iris-virginica meaning that distinguishing one from the other solely on sepal variables wouldn’t be conclusive enough as there is a lot of overlap. 
 The Petal Scatterplot is a lot more conclusive and  tells us we can confidently identify the iris-setosa; it is more likely to be shorter in both petal length and width from the other two species. Although there is still some overlap, the iris-virginica is also more likely to have a wider and longer petal.
 <br></br>
+
+<b><u><p id='Boxplot'>Boxplot</b></u></p>
 Another way we can view and visualise this distribution of data is by a using a boxplot
+
 
 ![boxplot](Images\boxplot.png) 
 
@@ -261,15 +292,24 @@ Some observations:
 - The 4 sections of the box plot (lower quartile, upper quartile, inter quartile, whiskers) are uneven in size for each.  This shows that many flowers are similar but, vary much more in other areas such as the  upper whisker in both petal lenght and sepal lenght. 
 
 ----
-<u><b>Pairplot</b></u>
+<b><u><p id='Pairplot'>Pairplot</b></u></p>
 
 It is possible to do an overview of all these plots on one grid by using a pairplot. A pairplot graphs the pairwise relationships of the numerical columns for the whole dataframe. The pairplot is a good way to get a visual overview of the data and can be used to make instant relationship connections.
 
 ![pairplot](Images\pairplot.png)
 
 ---
+</br>
+<b><u><p id='Andrews_Curve'>Andrews Curve</b></u></p>
 
-<h2><b><u>Correlations:</u></b></h2>
+While reseaching the various ways to visualise data. I came across Andrews curve and thought it could be an intresting addition to my analysis as it is a technique used for plotting multivariate data, which is what the iris data set is. Data with similar patterns will produce similar curves  and "...cases in a second group will have a different profile of values for the variables from those in the first group, and thus the curves produced for this second group will show a different pattern from those for the first group." [ref]. With this in mind, we can once again see how the iris-setosa is differs the most from the other two species.
+
+![andrews curve](Images\andrews_curve.png)
+</br>
+
+---
+<b><u><p id='Correlations'>Correlations</b></u></p>
+
 Using .corr() we can further investigate the correlations between the four variables. 
 
 ![corr](Images\correlations.PNG)
@@ -290,7 +330,8 @@ We can investigate these correlations futher by using the individual dataframes 
 Looking at the species separately the correlation isn't as clear. 
 The strongest correlation by far is the petal lenght and sepal lenght of the iris-versicolor. Otherwise, there isn't any major correlation when viewing each species individually.
 ___
-<h2><b><u>Clustermap:</u></b></h2>
+<b><u><p id='Clustermap'>Clustermap:</b></u></p>
+
 
 Another way we can visualise these correlation similarties is by using a clustermap. This is another matrix plot. A cluster map employs hierarchical clustering to cluster the rows and columns of the matrix. This means that it orders data by relationships and we can see where similarities lie.
 I personally found this particular plot difficult to decipher at first but, we can see that iris-setosa has distinct charecteristics while Viriginica and Versicolor are harder to distngusish and are thus sorted into the same clusters.
@@ -312,17 +353,10 @@ This README was also something that was new to me. Learning how to format and ma
 To conclude, while having met the objectives of this project there is a lot of room for improvement. I think this project was very much finding my feet and becoming comfortable with using python and how it can be used to explore data. My personal goal going forward is to build on the base that I have gained doing this project and get deeper into python's capabilities and core concepts of data analysis and science. This only scratches the surface of what can be achieved but acted as a strong building block for my knowledge and confidence in analysing data.
 
 -----
-</br>
-<h2><b><u>Andrews Curve</u></b></h2>
-While reseaching the various ways to visualise data. I came across Andrews curve and thought it could be an intresting addition to my analysis as it is a technique used for plotting multivariate data, which is what the iris data set is. Data with similar patterns will produce similar curves  and "...cases in a second group will have a different profile of values for the variables from those in the first group, and thus the curves
-produced for this second group will show a different pattern from those for the first group." [ref]. With this in mind, we can once again see how the iris-setosa is differs the most from the other two species.
 
-![cluster map](Images\andrews_curve.png)
-</br>
 
 ---
-
-<h2><b><u>References</u></b></h2>
+<b><u><p id='References'>References</b></u></p>
 https://pandas.pydata.org/docs/reference/api/pandas.read_csv.html
 https://www.kite.com/python/answers/how-to-redirect-print-output-to-a-text-file-in-python
 https://data36.com/plot-histogram-python-pandas/
