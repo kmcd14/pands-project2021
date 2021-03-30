@@ -41,7 +41,6 @@
   
 ---
 ---
-<br>
 <h2><b><u><p id='Description'> Description</b></u></p></h2>
 This document is relating to pands-project2021 for programming and scripting module. The aim of this project is to research and investigate the well-know Fisher's Iris data set, doing so by writing documentation and python script to investigate the data. 
 
@@ -133,8 +132,8 @@ The three different species of iris recorded are; <b>Iris Setosa, Iris Versicolo
 <b><u>GitHub:</u></b> is a code hosting platform for collaboration and version control. https://github.com/
 
 ---
+---
 
-<br>
 <h3><b><u><p id='Libraries_Used'>Libraries Used:</b></u></p></h3>
 
 
@@ -155,7 +154,7 @@ The below image demostrates how to import the libraries used:
 <br>
 
 ---
-
+---
 <h3><b><u><p id='Importing_Data'>Importing Data Set:</b></u></p></h3>
 
 Now that the modules are imported we can import the dataset.
@@ -181,6 +180,7 @@ Now that the modules are imported we can import the dataset.
 
 I have also decided to separating the iris data frame into smaller data frames comprising of each species. This will allow for further opportunties investigation (learnpython.org, 2021)
 
+---
 -----
 </br>
 <h3><b><u><p id='Text_File'>Creating A Text File For Output</b></u></p></h3>
@@ -201,7 +201,7 @@ The text file is now created and visable within the project folder in the leftha
 It is extremely important to close the file once finshed. Otherwise it will throw a host of problems. Make sure to put the above statement at the end of your code (kite.com, 2021).
 
 -----
-</br>
+---
 <h2><b><u><p id='Data_Summary'>Data Summary</b></u></p></h2>
 <br>
 
@@ -284,7 +284,6 @@ We can use seaborn and matplotlib to visualise each record to help make observat
 <br>
 
 -----
-<br>
 <h3><b><u><p id='Histogram'>Histogram</b></u></p></h3>
 
 <img src='Images\hist_petal_lenght.png'>
@@ -308,7 +307,6 @@ Using a scatterplot we can plot the variable pairs i.e. Petal Lenght and Width, 
 
 <img src='Images\scatter_sepal.png'>
 <img src='Images\scatter_petal.png'>
-<br></br>
 <h4>The sepal scatterplot isn’t that distinguishable. We can see that the iris-setosa is more likely to be wider on average but there's a lot of crossover between iris-versicolour and iris-virginica meaning that distinguishing one from the other solely on sepal variables wouldn’t be conclusive enough as there is a lot of overlap. 
 The Petal Scatterplot is a lot more conclusive and  tells us we can confidently identify the iris-setosa; it is more likely to be shorter in both petal length and width from the other two species. Although there is still some overlap, the iris-virginica is also more likely to have a wider and longer petal.
 <br></br>
@@ -334,14 +332,14 @@ It is possible to do an overview of all these plots on one grid by using a pairp
 <img src='Images\pairplot.png'>
 
 ---
-</br>
+
 <h3><b><u><p id='Andrews_Curve'>Andrews Curve</b></u></p></h3>
 
 While reseaching the various ways to visualise data. I came across Andrews curve and thought it could be an intresting addition to my analysis as it is a technique used for plotting multivariate data, which is what the iris data set is. Data with similar patterns will produce similar curves  and "...cases in a second group will have a different profile of values for the variables from those in the first group, and thus the curves produced for this second group will show a different pattern from those for the first group" (Spencer, N.H., 2003). With this in mind, we can once again see how the iris-setosa is differs the most from the other two species (pandas.org, 2021).
 
 <img src='Images\andrews_curve.png'>
 
-</br>
+
 
 ---
 <h3><b><u><p id='Correlations'>Correlations</b></u></p></h3>
@@ -379,8 +377,8 @@ I personally found this particular plot difficult to decipher at first but, we c
 </br>
 
 -----
+----
 </br>
-<br>
 <h2><b><u>Conclusion</u></b></h2>
 I approached the analysis with the same intention of its original purpose - to be able to identify the different species of iris by the variants in characteristics (Petal length, petal width, sepal length and sepal width). From this analysis I have concluded that the petal is the most important variable when classifying the species of iris. It is easier to distinguish its dimensions between the species than that of the sepal. 
 <br></br>
