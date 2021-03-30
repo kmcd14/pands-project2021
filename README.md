@@ -164,7 +164,8 @@ Now that the modules are imported we can import the dataset.
   <li>Import the dataset into python as a csv file using the pandas module. As the dataset contains no heading the name parameter can be used to include them. Without inserting column headings the data would only return 149 rows instead of 150 as pandas will automatically use the first row as a header if none is specified (pandas.org, 2021).
   </li>
   
-  <img scr='Images\importing_data.PNG'>
+  <img src='Images\importing_data.PNG'>
+  
   
  
  <li>note: you could also use the .columns() method to do this.</li>
@@ -175,8 +176,10 @@ Now that the modules are imported we can import the dataset.
 ---
 <h3><u><b>Separating Data</b></u></h3>
 
-  ![separating data](Images\separating_data.PNG)
-I have also decided to separating the iris data frame into smaller data frames comprising of each species. This will allow for further investigation (learnpython.org, 2021)
+  <img src='Images\separating_data.PNG'>
+
+
+I have also decided to separating the iris data frame into smaller data frames comprising of each species. This will allow for further opportunties investigation (learnpython.org, 2021)
 
 -----
 </br>
@@ -184,15 +187,16 @@ I have also decided to separating the iris data frame into smaller data frames c
 
 To create the text file for our analysis to be outputted to we do the following (GeeksforGeeks, 2021):
 
-![creating a text file](Images\creating_text_file.PNG)
+<img src='Images\creating_text_file.PNG'>
+
 This automatically creates a new text file called Iris Analysis.
 The 'w' means write to this file.
 
-![text file](Images\text_file.PNG)
+<img src='Images\text_file.PNG'>
 
 The text file is now created and visable within the project folder in the lefthand sidepane.
 
-![closing text file](Images\closing_text_file.PNG)
+<img src='Images\closing_text_file.PNG'>
 
 It is extremely important to close the file once finshed. Otherwise it will throw a host of problems. Make sure to put the above statement at the end of your code (kite.com, 2021).
 
@@ -201,14 +205,15 @@ It is extremely important to close the file once finshed. Otherwise it will thro
 <h2><b><u><p id='Data_Summary'>Data Summary</b></u></p></h2>
 <br>
 
-![overview](Images\overview.PNG)
+<img src='Images\overview.PNG'>
+
 <br>
 
-![overview output](Images\overview_output.PNG)
+<img src='Images\overview_output.PNG'>
 
 Getting an overview of the data using .info() to make sure it loaded correctly. This will return how many rows there are, column names, whether null and the type. We know there should be 150 rows and 5 columns from reseaching the data set.
 
-![header output](Images\header.PNG)
+<img src='Images\header.PNG'>
 
 By using .head() we can get a brief look at our data. It will automatically return the first 5 rows but, you can see more or less by passing a number to it.
 
@@ -217,34 +222,31 @@ By using .head() we can get a brief look at our data. It will automatically retu
 ---
 <h3><b><u><p id='Cleaning_Data'>Cleaning Data</b></u></p></h3>
 
-
-![cleaning data](Images\cleaning_data.PNG)
+<img src='Images\cleaning_data.PNG'>
 
 Here we are checking the data for any null values. We also can check for duplicates, and, if there are any, which rows.
 
-![cleaning data output](Images\cleaning_data_output.PNG)
+<img src='Images\cleaning_data_output.PNG'>
 
 As we can see there is no null values in this dataset but there are 3 duplicates. 
 
 *note: by using .sum() will return the amount of null/duplicates.
 
-*note: This returned three duplicates, as we know this is a balanced dataset On this occasion I decided against removing them.
+*note: This returned three duplicates, as we know this is a balanced dataset, so on this occasion I decided against removing them.
 
 ---
 <h3><b><u><p id='Count'>Count</b></u></p></h3>
 
-
-![count](Images\count.PNG)
-
-![count](Images\count_output.PNG)
+<img src='Images\count.PNG'>
+<img src='Images\count_output.PNG'>
 
 Using .count() we can see how many instances of each unique species the data contains. From research we know it ahould be 50 of each which there is.
 
 ---
 <h3><b><u><p id='Stats'>Stats</b></u></p></h3>
 
-![stat overview](Images\describe.PNG)
-![stat overview](Images\stats.PNG)
+<img src='Images\describe.PNG'>
+<img src='Images\stats.PNG'>
 
 Getting a summary of the dataframe values (count, mean,  standard deviation, min, percentile (25%, 50%, 75%), max).
 
@@ -256,16 +258,13 @@ Getting a summary of the dataframe values (count, mean,  standard deviation, min
 
 <h3><b><u><p id='Groupby'>Groupby</b></u></p></h3>
 
-
-![mean groupby](Images\mean_groupby.PNG)
+<img src='Images\mean_groupby.PNG'>
 
 We can take closer look at these values for each species with groupby function. To filter by column, pass .groupby() the column you want to sort by (‘Species’ in this case) and follow it by the aggregate function - e.g. min, max, mean, count - you wish to perform. In the above code mean is used. (Solomon, B., 2021)
 
-![mean](Images\mean.PNG)
-
-![max](Images\max.PNG)
-
-![min](Images\min.PNG)
+<img src='Images\mean.PNG'>
+<img src='Images\max.PNG'>
+<img src='Images\min.PNG'>
 
 <h4>Observations: 
 From this we can see that iris-setosa varies a lot more than the other two when it comes to petal attributes. It also seems to on average have a wider sepal than iris-versicolour and iris-virginica.
@@ -279,7 +278,7 @@ We can use seaborn and matplotlib to visualise each record to help make observat
 ---
 <h3><b><u><p id='Countplot'>Countplot</b></u></p></h3>
 
-![countplot](Images\count_plot.png)
+<img src='Images\count_plot.png'>
 
 <h4>From the above countplot we can clearly see that there is an equal number of occurances of each species. 
 <br>
@@ -288,11 +287,10 @@ We can use seaborn and matplotlib to visualise each record to help make observat
 <br>
 <h3><b><u><p id='Histogram'>Histogram</b></u></p></h3>
 
-![hist](Images\hist_petal_lenght.png)
-![hist](Images\hist_petal_width.png)
-![hist](Images\hist_sepal_lenght.png)
-![hist](Images\hist_sepal_width.png)
-
+<img src='Images\hist_petal_lenght.png'>
+<img src='Images\hist_petal_width.png'>
+<img src='Images\hist_sepal_lenght.png'>
+<img src='Images\hist_sepal_width.png'>
 
 <h4>Above each variable is plotted on a histogram using seaborn. I used this to show how the three species differ in their anatomical features. These unique values are grouped into ranges whic are refered to as bins. KDE (kernel density estimation) can be turned on or off by passing kde='False'. KDE is used to estimate <i>the distribution of observations in a dataset, analagous to a histogram</i> (Seaborn.org, 2021)
 
@@ -308,8 +306,8 @@ Some conclusions we can draw from this:
 
 Using a scatterplot we can plot the variable pairs i.e. Petal Lenght and Width, and Sepal Lenght and Width to get a clearer view of how the species differ.
 
-![scatter sepal](Images\scatter_sepal.png)
-![scatter petal](Images\scatter_petal.png) 
+<img src='Images\scatter_sepal.png'>
+<img src='Images\scatter_petal.png'>
 
 <h4>The sepal scatterplot isn’t that distinguishable. We can see that the iris-setosa is more likely to be wider on average but there's a lot of crossover between iris-versicolour and iris-virginica meaning that distinguishing one from the other solely on sepal variables wouldn’t be conclusive enough as there is a lot of overlap. 
 The Petal Scatterplot is a lot more conclusive and  tells us we can confidently identify the iris-setosa; it is more likely to be shorter in both petal length and width from the other two species. Although there is still some overlap, the iris-virginica is also more likely to have a wider and longer petal.
@@ -318,8 +316,7 @@ The Petal Scatterplot is a lot more conclusive and  tells us we can confidently 
 <h3><b><u><p id='Boxplot'>Boxplot</b></u></p></h3>
 Another way we can view and visualise this distribution of data is by a using a boxplot
 
-
-![boxplot](Images\boxplot.png) 
+<img src='Images\boxplot.png'>
 
 The box plot displays the distribution of quantitative data (Petal length, petal width, sepal length and width) which in turn allows us to make comparisons between the variables. The box shows the dataset and the whiskers (black markings) show the rest of the distribution.
 Some observations:
@@ -332,7 +329,7 @@ Some observations:
 
 It is possible to do an overview of all these plots on one grid by using a pairplot. A pairplot graphs the pairwise relationships of the numerical columns for the whole dataframe. The pairplot is a good way to get a visual overview of the data and can be used to make instant relationship connections.
 
-![pairplot](Images\pairplot.png)
+<img src='Images\pairplot.png'>
 
 ---
 </br>
@@ -340,7 +337,8 @@ It is possible to do an overview of all these plots on one grid by using a pairp
 
 While reseaching the various ways to visualise data. I came across Andrews curve and thought it could be an intresting addition to my analysis as it is a technique used for plotting multivariate data, which is what the iris data set is. Data with similar patterns will produce similar curves  and "...cases in a second group will have a different profile of values for the variables from those in the first group, and thus the curves produced for this second group will show a different pattern from those for the first group" (Spencer, N.H., 2003). With this in mind, we can once again see how the iris-setosa is differs the most from the other two species (pandas.org, 2021).
 
-![andrews curve](Images\andrews_curve.png)
+<img src='Images\andrews_curve.png'>
+
 </br>
 
 ---
@@ -348,10 +346,11 @@ While reseaching the various ways to visualise data. I came across Andrews curve
 
 Using .corr() we can further investigate the correlations between the four variables. 
 
-![corr](Images\correlations.PNG)
+<img src='Images\correlations.PNG'>
 
 To get a visual representation of these correlations we can use a matrix plots to create a heatmap. A matrix plots allows you to plot data as color-encoded matrices.
-![heatmap](Images\heatmap.png)
+
+<img src='Images\heatmap.png'>
 
 From the heatmap we can conculde the there is a positive correlation between 
 - petal width and sepal lenght 
@@ -361,7 +360,7 @@ From the heatmap we can conculde the there is a positive correlation between
 
 We can investigate these correlations futher by using the individual dataframes for each species we created earlier. By using .corr() on each separately. 
 
-![separate corr](Images\separate_correlations.PNG)
+<img src='Images\separate_correlations.PNG'>
 
 Looking at the species separately the correlation isn't as clear. 
 The strongest correlation by far is the petal lenght and sepal lenght of the iris-versicolor. Otherwise, there isn't any major correlation when viewing each species individually.
@@ -371,7 +370,8 @@ ___
 
 Another way we can visualise these correlation similarties is by using a clustermap. This is another matrix plot. A cluster map employs hierarchical clustering to cluster the rows and columns of the matrix. This means that it orders data by relationships and we can see where similarities lie (Han, J., Pei, J., Kamber, M., 2011). 
 I personally found this particular plot difficult to decipher at first but, we can see that iris-setosa has distinct charecteristics while Viriginica and Versicolor are harder to distngusish and are thus sorted into the same clusters.
-![cluster map](Images\cluster_map.png)
+
+<img src='Images\cluster_map.png'>
 
 
 </br>
