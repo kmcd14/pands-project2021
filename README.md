@@ -7,6 +7,7 @@
 <h2 style=color:#DDA0DD><b><u>Table of Contents</b></u></h2></summary>
   <ol>
     <li><a href='#Description'> Description</a></li>
+    <li><a href="#Script">How To Run analysis.py</a></li>
     <li><a href='#Iris'> What Is the Iris DataSet?</a></li>
     
   <li><a href='#Technologies_Used'>Technologies Used</a></li>
@@ -61,13 +62,42 @@ Python script, documentation, cvs file and images can be found at https://github
    <li>Write a readme file which details methods, modules, research and conclusions of my analysis.</li>
 </ul>
 
------
+---
+
+<h3><b><u><p id='Script'> How To Run analysis.py</b></u></p></h3>
+
+<ol>
+<li>Create a folder on your desktop where you wish to store the code</li>
+<li>Navigate to the repoistory https://github.com/kmcd14/pands-project2021.</il>
+<br></br>
+
+![git](Images\git.PNG)
+
+<li>Copy the repository address, as seen in the above picture. Using either SSH or HTTPS</li>
+<li>Open bash shell on your desktop and navigate to the folder you created earlier.</li>
+<li>Once in the folder use 
+
+
+
+    $git clone git@github.com:kmcd14/programming2021.git
+
+
+</li>
+<li>Set up pull mode and pull down the contents
+</li>
+<li>To run the code enter the below in the terminal
+
+    $python .\analysis.py
+
+
+
+
 </br>
 <h3><b><u><p id='Iris'>What Is The Iris DataSet?</b></u></p></h3>
 
 The iris dataset is one of the most popular data sets in the world. A simple google alone generates almost 702,000 results. It is famous among scientists. It has been used to illustrate a variety of techniques such as pattern recongition, multivariate statistics, machine learning and data visualisation. 
-1
-<i>Fisher's Iris data</i> otherwise known as <i>The Iris flower data set</i> is a multivariate data set. This means the dataset involves more than one variable.[ref]  published by the British statistician, eugenicist, and biologist Ronald Fisher in his 1936 paper <i>The use of multiple measurements in taxonomic problems as an example of linear discriminant analysis</i> (Kozak, M. & Łotocka, B., 2013).
+
+<i>Fisher's Iris data</i> otherwise known as <i>The Iris flower data set</i> is a multivariate data set. This means the dataset involves more than one variable(Wikipedia). It was published by the British statistician, eugenicist, and biologist Ronald Fisher in his 1936 paper <i>The use of multiple measurements in taxonomic problems as an example of linear discriminant analysis</i> (Kozak, M. & Łotocka, B., 2013).
 <br>
 </br>
 Although published by Fisher, the data was orignally collected by American botanist, Edgar Anderson.
@@ -77,7 +107,7 @@ we must reduce the problem to the simplest terms and study a few easily recogniz
 
 
 The dataset contains 150 records with each row representing a species of iris flower. Each sample is divided under five columns. - Sepal Length, Sepal Width, Petal Length and Petal Width all in centimeters and the fifth column being the class/species of Iris. 
-The samples where collected on the same day, in the same area, by the same person and measured with the sae appuratus at the same time to ensure justness (Wikipedia, 2021). Fisher used a linear discriminant analysis (LDA) on the data set. That is <i>"...a dimension reduction method which finds an optimal linear transformation that maximizes the class separability."</i> (Park, C.H., Park. H., 2008). i.e. be able to separate between the classes of iris'. 
+The samples where collected on the same day, in the same area, by the same person and measured with the same appuratus at the same time to ensure justness (Wikipedia). Fisher used a linear discriminant analysis (LDA) on the data set. That is <i>"...a dimension reduction method which finds an optimal linear transformation that maximizes the class separability."</i> (Park, C.H., Park. H., 2008). i.e. be able to separate between the classes of iris'. 
 <br></br>
 The three different species of iris recorded are; <b>Iris Setosa, Iris Versicolour and Iris Virginica.</b>
 
