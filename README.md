@@ -97,7 +97,7 @@ Python script, documentation, cvs file and images can be found at https://github
 
 The iris dataset is one of the most popular data sets in the world. A simple google alone generates almost 702,000 results. It is famous among scientists. It has been used to illustrate a variety of techniques such as pattern recongition, multivariate statistics, machine learning and data visualisation. 
 
-<i>Fisher's Iris data</i> otherwise known as <i>The Iris flower data set</i> is a multivariate data set. This means the dataset involves more than one variable(Wikipedia). It was published by the British statistician, eugenicist, and biologist Ronald Fisher in his 1936 paper <i>The use of multiple measurements in taxonomic problems as an example of linear discriminant analysis</i> (Kozak, M. & Łotocka, B., 2013).
+<i>Fisher's Iris data</i> otherwise known as <i>The Iris flower data set</i> is a multivariate data set. This means the dataset involves more than one variable (Wikipedia, 2021). It was published by the British statistician, eugenicist, and biologist Ronald Fisher in his 1936 paper <i>The use of multiple measurements in taxonomic problems as an example of linear discriminant analysis</i> (Kozak, M. & Łotocka, B., 2013).
 <br>
 </br>
 Although published by Fisher, the data was orignally collected by American botanist, Edgar Anderson.
@@ -107,7 +107,7 @@ we must reduce the problem to the simplest terms and study a few easily recogniz
 
 
 The dataset contains 150 records with each row representing a species of iris flower. Each sample is divided under five columns. - Sepal Length, Sepal Width, Petal Length and Petal Width all in centimeters and the fifth column being the class/species of Iris. 
-The samples where collected on the same day, in the same area, by the same person and measured with the same appuratus at the same time to ensure justness (Wikipedia). Fisher used a linear discriminant analysis (LDA) on the data set. That is <i>"...a dimension reduction method which finds an optimal linear transformation that maximizes the class separability."</i> (Park, C.H., Park. H., 2008). i.e. be able to separate between the classes of iris'. 
+The samples where collected on the same day, in the same area, by the same person and measured with the same appuratus at the same time to ensure justness (Wikipedia, 2021). Fisher used a linear discriminant analysis (LDA) on the data set. That is <i>"...a dimension reduction method which finds an optimal linear transformation that maximizes the class separability."</i> (Park, C.H., Park. H., 2008). i.e. be able to separate between the classes of iris'. 
 <br></br>
 The three different species of iris recorded are; <b>Iris Setosa, Iris Versicolour and Iris Virginica.</b>
 
@@ -308,10 +308,12 @@ Using a scatterplot we can plot the variable pairs i.e. Petal Lenght and Width, 
 
 <img src='Images\scatter_sepal.png'>
 <img src='Images\scatter_petal.png'>
-
+<br></br>
 <h4>The sepal scatterplot isn’t that distinguishable. We can see that the iris-setosa is more likely to be wider on average but there's a lot of crossover between iris-versicolour and iris-virginica meaning that distinguishing one from the other solely on sepal variables wouldn’t be conclusive enough as there is a lot of overlap. 
 The Petal Scatterplot is a lot more conclusive and  tells us we can confidently identify the iris-setosa; it is more likely to be shorter in both petal length and width from the other two species. Although there is still some overlap, the iris-virginica is also more likely to have a wider and longer petal.
 <br></br>
+
+---
 
 <h3><b><u><p id='Boxplot'>Boxplot</b></u></p></h3>
 Another way we can view and visualise this distribution of data is by a using a boxplot
@@ -348,7 +350,7 @@ Using .corr() we can further investigate the correlations between the four varia
 
 <img src='Images\correlations.PNG'>
 
-To get a visual representation of these correlations we can use a matrix plots to create a heatmap. A matrix plots allows you to plot data as color-encoded matrices.
+To get a visual representation of these correlations we can use a matrix plots to create a heatmap. A matrix plots allows you to plot data as color-encoded matrices (seaborn.org, 2021).
 
 <img src='Images\heatmap.png'>
 
@@ -419,6 +421,8 @@ pandas.org. (2021). pandas.read_csv. Available: https://pandas.pydata.org/docs/r
 pandas.org. (2021). pandas.plotting.andrews_curves. Available: https://pandas.pydata.org/docs/reference/api/pandas.plotting.andrews_curves.html. Last accessed 28th March 2021.
 
 seaborn.org. (2021). Visualizing distributions of data. Available: https://seaborn.pydata.org/tutorial/distributions.html. Last accessed 20th March 2021.
+
+seaborn.org. (2021). seaborn.heatmap. Available: https://seaborn.pydata.org/generated/seaborn.heatmap.html. Last accessed 25th March 2021.
 
 Solomon, B. (2021). Pandas GroupBy: Your Guide to Grouping Data in Python. Available: https://realpython.com/pandas-groupby/. Last accessed 24th March 2021.
 
