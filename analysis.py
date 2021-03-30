@@ -27,7 +27,7 @@ virginicadf=df.loc[df["Species"]=="Iris-versicolor"] # .loc gets the rows in Spe
 ## CREATING TEXT FILE ##
 
 # Creating a text file called Iris Analysis to print output results of comparing the species
-sys.stdout = open("Iris Analysis", "w", newline='\n') # Using 'w' for write mode. Adding a newline between each print statement 
+sys.stdout = open("Iris Analysis", "w", newline='\n') # Using 'w' for read mode. Adding a newline between each print statement 
 print('******Iris Dataset Analysis********\n______________________________________________________________________________')
 
 
@@ -124,6 +124,12 @@ plt.show() # Show plot
 sns.pairplot(df, hue='Species', palette='plasma')
 plt.show() # Showing plot
 
+# Andrews Curve
+# (dataframe, column containing the class name, colourmap)
+andrews_curve = pd.plotting.andrews_curves(df,"Species",colormap='magma')
+plt.title('Andrews Curve') # Adding title
+plt.grid( color='black', lw=0.15, ls="--") # Styling grid
+plt.show() # Showing plot
 
 # Heatmap representation of the correlations 
 # (correlation dataframe, colour map, line colour and width add lines to divide cells & their colour, annot shows the data value in each cell)
@@ -133,16 +139,10 @@ plt.show() # Show plot
 
 
 # Clustermap - another look at correlations and their relationships
-# (cluster dataframe, colourmap)
-cluster = sns.clustermap(df.corr(), cmap='plasma')
+# (correlation dataframe, colour map, line colour and width add lines to divide cells & their colour, annot shows the data value in each cell)
+cluster = sns.clustermap(df.corr(), cmap='Set3', linecolor='white',linewidths=0.5, annot=True)
 plt.show() # Showing plot
 
-# Andrews Curve
-# (dataframe, column containing the class name, colourmap)
-andrews_curve = pd.plotting.andrews_curves(df,"Species",colormap='magma')
-plt.title('Andrews Curve') # Adding title
-plt.grid( color='black', lw=0.15, ls="--") # Styling grid
-plt.show() # Showing plot
 
 # Closing Iris Analysis File
 sys.stdout.close()
