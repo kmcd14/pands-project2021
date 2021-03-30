@@ -85,9 +85,9 @@ Python script, documentation, cvs file and images can be found at https://github
 </li>
 <li>Set up pull mode and pull down the contents
 </li>
-<li>To run the code enter the below in the terminal
+<li>To run the code enter the below in the terminal</li></ol>
 
-    $python .\analysis.py
+        $python .\analysis.py
 
 
 
@@ -367,7 +367,7 @@ ___
 <h3><b><u><p id='Clustermap'>Clustermap:</b></u></p></h3>
 
 
-Another way we can visualise these correlation similarties is by using a clustermap. This is another matrix plot. A cluster map employs hierarchical clustering to cluster the rows and columns of the matrix. This means that it orders data by relationships and we can see where similarities lie (Han, J., Pei, J., Kamber, M., 2011). Data Mining: Concepts and Techniques. 3rd ed. Massachusetts: Elsevier. 457-458.
+Another way we can visualise these correlation similarties is by using a clustermap. This is another matrix plot. A cluster map employs hierarchical clustering to cluster the rows and columns of the matrix. This means that it orders data by relationships and we can see where similarities lie (Han, J., Pei, J., Kamber, M., 2011). 
 I personally found this particular plot difficult to decipher at first but, we can see that iris-setosa has distinct charecteristics while Viriginica and Versicolor are harder to distngusish and are thus sorted into the same clusters.
 ![cluster map](Images\cluster_map.png)
 
@@ -385,12 +385,12 @@ Although, interestingly in my research, I came across a journal article which st
 Both petals and sepals are leaves which have adapted. 
 The debate lies in the fact that <i>“...the morphological distinction of perianthium and perigo-nium, or sepaloid and petaloid perigon is not clear”</i> (Kozak, M. & Łotocka, B., 2013). This is their molecular makeup. So while the iris data set is widely used in data science, statistics and machine learning it is nowhere near as important or impactful in the world of biotomy. 
 <br></br>
-Overall, I learnt a lot by doing this project. I had no previous experince with analysing data or much programming experience and was apprehensive about how to go about it. It is such a vast area and there are so many paths you could go with it, it can be overwhelming. I believe I have met the objectives of this project, which was to investigate the iris data set, analyse the data , create a python script to do this and document investigation.
+Overall, I learnt a lot by doing this project. I had no previous experince with analysing data or much programming experience and was apprehensive about how to go about it. It is such a vast area and there are so many paths you could go with it, it can be overwhelming. This project also introduced me to new concepts such as KDE, linear discriminant analysis, clustering, Andews Curve and by way an introduction to algorithms and machine learning, all of which I had no previous experience and knowledge of. I look forward to continued learning and improving and building my experince knowledge in these areas as the course progresses. I believe I have met the objectives of this project, which was to investigate the iris data set, analyse the data , create a python script to do this and document investigation.
 I found using the data visualisation tools matplotlib and seaborn pivotal in helping me understand the data. It helped me see relationships between the data clearly. I can see why data visualisation is it’s own field and how important it is. I explored the styling libraries of these libraries to make visually pleasing plots, this is definitely an area I wish to explore more in the future. 
 
-This README was also something that was new to me. Learning how to format and make it appealing was something that took a bit of time and again is something I would like to develop in future projects, as it’s often the first file that is seen when you click into the repository on github so its an important first impression. Time management was an important factor for me too. Currently, I am working fulltime and have a number of other projects so setting my own deadlines and working towards them was vital.
+Documenting a project of this nature was also something  new to me. Learning how to format and make it appealing was something that took a bit of time and again is something I would like to develop for future projects, as it’s often the first file that is seen when you click into the repository on github, so its an important first impression. Time management was an important factor for me too. Currently, I am working fulltime and have a number of other projects/assignments so setting my own deadlines and working towards them was vital to managing the workload.
 <br></br>
-To conclude, while having met the objectives of this project there is a lot of room for improvement. I think this project was very much finding my feet and becoming comfortable with using python and how it can be used to explore data. My personal goal going forward is to build on the base that I have gained doing this project and get deeper into python's capabilities and core concepts of data analysis and science. This only scratches the surface of what can be achieved but acted as a strong building block for my knowledge and confidence in analysing data.
+To conclude, while having met the objectives of this project there is a lot of room for improvement. I think this project was very much finding my feet and becoming comfortable with using python and how it can be used to explore data. My personal goal going forward is to build on the base that I have gained doing this project and get deeper into python's capabilities and core concepts of data analysis and science. This only scratches the surface of what can be achieved but acted as a soild building block for my knowledge and confidence in analysing data.
 
 -----
 
