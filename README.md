@@ -71,7 +71,7 @@ Python script, documentation, cvs file and images can be found at https://github
 <li>Navigate to the repoistory https://github.com/kmcd14/pands-project2021.</il>
 <br></br>
 
-![git](Images\git.PNG)
+<img src='Images\git.PNG'>
 
 <li>Copy the repository address, as seen in the above picture. Using either SSH or HTTPS</li>
 <li>Open bash shell on your desktop and navigate to the folder you created earlier.</li>
@@ -140,7 +140,8 @@ The three different species of iris recorded are; <b>Iris Setosa, Iris Versicolo
 
 The below image demostrates how to import the libraries used:
 
-![importing libraries](Images\importing_libraries.PNG)
+<img src='Images\importing_libraries.PNG'>
+
 
 <u><b>Numpy</b></u> is a Python library used for working with arrays. It produces a narray object. Numpy arrays are faster and more efficient than using python lists. It does this by storing arrays in one place in memory, so they can be accessed and manipulated quickly http://www.numpy.org/
 
@@ -163,7 +164,8 @@ Now that the modules are imported we can import the dataset.
   <li>Import the dataset into python as a csv file using the pandas module. As the dataset contains no heading the name parameter can be used to include them. Without inserting column headings the data would only return 149 rows instead of 150 as pandas will automatically use the first row as a header if none is specified (pandas.org, 2021).
   </li>
   
-  ![importing data](Images\importing_data.PNG)
+  <img scr='Images\importing_data.PNG'>
+  
  
  <li>note: you could also use the .columns() method to do this.</li>
  </ul>
