@@ -20,7 +20,7 @@ df = pd.read_csv('iris.csv', header=None, names=['Sepal Lenght(cm)', 'Sepal Widt
 
 # Diving data into separate dataframes using slicing
 setosadf=df.loc[df["Species"]=="Iris-setosa"] # .loc gets the rows in Species == Iris-setosa
-versicolordfa=df.loc[df["Species"]=="Iris-virginica"] # .loc gets the rows in Species == Iris-virginica
+versicolordf=df.loc[df["Species"]=="Iris-virginica"] # .loc gets the rows in Species == Iris-virginica
 virginicadf=df.loc[df["Species"]=="Iris-versicolor"] # .loc gets the rows in Species == Iris-versicolor
 
 
@@ -52,9 +52,20 @@ print(df[df.duplicated()],'\n___________________________________________________
 print('Count of each unique species:\r')
 print(df['Species'].value_counts(),'\n______________________________________________________________________________')
 
+
 # A summary of stats for each variable(count, mean, min, max, standard deviation, percentile )
 print('Stat Summary: \r')
 print(df.describe(),'\n______________________________________________________________________________')
+
+# A summary of stats for each indivdual species(count, mean, min, max, standard deviation, percentile )
+print('iris-setosa Summary: \r')
+print(setosadf.describe(),'\n______________________________________________________________________________')
+
+print('iris-versicolor Summary: \r')
+print(versicolordf.describe(),'\n______________________________________________________________________________')
+
+print('iris-virgina Summary: \r')
+print(virginicadf.describe(),'\n______________________________________________________________________________')
 
 # Grouping species by mean, max and min values To futher look at this data
 mean_values = df.groupby('Species').mean() # Mean
@@ -64,15 +75,18 @@ print('Max Values: \r\n', max_val,'\n___________________________________________
 min_values = df.groupby('Species').min() #Min
 print('Min Values: \r\n', min_values,'\n______________________________________________________________________________')
 
+
+
 # Find the pairwise correlation of columns in the dataframe.
 # Using the whole dataframe
 print('\rCorrelations:\n\t',df.corr(),'\n______________________________________________________________________________') 
 # Just iris-setosa dataframe
 print('\riris-setosa:\n\t',setosadf.corr(),'\n______________________________________________________________________________')
 # Just iris-veriscolour dataframe
-print('\riris-versicolor:\n\t',versicolordfa.corr(),'\n______________________________________________________________________________')
+print('\riris-versicolor:\n\t',versicolordf.corr(),'\n______________________________________________________________________________')
 # Just iris-virginica dataframe
 print('\riris-virginica:\n\t',virginicadf.corr(),'\n______________________________________________________________________________')
+
 
 
 ## VISUALISING THE DATA ##

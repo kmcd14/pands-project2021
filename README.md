@@ -259,7 +259,9 @@ Getting a summary of the dataframe values (count, mean,  standard deviation, min
 
 *note: Standard Deviation: is a measure of how spread out the data is spread out around the mean (average). (Glen, S., 2021). 
 
- 
+Using the data we separated earlier into smaller dataframes we can do the same for each species
+ <img src='Images\indivdual_summary().PNG'>
+ <img src='Images\indivdual_summary.PNG'>
 
 ---
 
