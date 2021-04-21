@@ -136,8 +136,9 @@ The three different species of iris recorded are; <b>Iris Setosa, Iris Versicolo
 
 <h3><b><u><p id='Libraries_Used'>Libraries Used:</b></u></p></h3>
 
+<i>“Python is a widely-used, interpreted, object-oriented, and high-level programming language with dynamic semantics, used for general-purpose programming. It was created by Guido van Rossum, and first released on February 20, 1991”</i> (Python Institute, 2021). It is suitable for research, prototyping and building production systems, which eliminates the need for using different languages for both. Python has a vast and continuously growing library to choose from which makes it perfect for data analysis, such as Numpy and Pandas. It is a robust, flexible and efficient language which provides many solutions and avenues to approach and solve problems.
 
-The below image demostrates how to import the libraries used:
+The below image demostrates how to import the libraries used for this project:
 
 <img src='Images\importing_libraries.PNG'>
 
@@ -152,7 +153,12 @@ The below image demostrates how to import the libraries used:
 
 <u><b>sys</b></u> provides numerous variables and functions to manipulate the python environment. This particular project asks for the script to return the output to a text file and not the terminal. To do this we can use stdout. Stdout is “a built-in file object that is analogous to the interpreter’s standard output stream in Python”. This output can be in any form such as a print statement.  Output can be of any form, it can be output from a print statement.  https://docs.python.org/3/library/sys.html
 <br>
+<br>
+<b>If your system does not have these libaries installed enter the below command from the command line: </b>
 
+```
+    $pip install <library name>
+```
 ---
 ---
 <h3><b><u><p id='Importing_Data'>Importing Data Set:</b></u></p></h3>
@@ -417,6 +423,8 @@ Park, C.H., Park. H. (2008). A comparison of generalized linear discriminant ana
 pandas.org. (2021). pandas.read_csv. Available: https://pandas.pydata.org/docs/reference/api/pandas.read_csv.html. Last accessed 16th March 2021.
 
 pandas.org. (2021). pandas.plotting.andrews_curves. Available: https://pandas.pydata.org/docs/reference/api/pandas.plotting.andrews_curves.html. Last accessed 28th March 2021.
+
+Python Institute. (2021). What is Python?. Available: https://pythoninstitute.org/what-is-python/. Last accessed 21st April 2021.
 
 seaborn.org. (2021). Visualizing distributions of data. Available: https://seaborn.pydata.org/tutorial/distributions.html. Last accessed 20th March 2021.
 
