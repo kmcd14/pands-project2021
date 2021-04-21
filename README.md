@@ -32,6 +32,7 @@
       <li><a href="#Scatterplot">Scatterplot</a></li>
       <li><a href="#Pairplot">Pairplot</a></li>
       <li><a href="#Andrews_Curve">Andrews Curve</a></li>
+      <li><a href="#Parallel_Coordinates">Parallel Coordinates</a></li>
       <li><a href="#Correlations">Correlations</a></li>
       <li><a href="#Clustermap">Clustermap</a></li>
     </ul>
@@ -344,8 +345,19 @@ It is possible to do an overview of all these plots on one grid by using a pairp
 While reseaching the various ways to visualise data. I came across Andrews curve and thought it could be an intresting addition to my analysis as it is a technique used for plotting multivariate data, which is what the iris data set is. Data with similar patterns will produce similar curves  and "...cases in a second group will have a different profile of values for the variables from those in the first group, and thus the curves produced for this second group will show a different pattern from those for the first group" (Spencer, N.H., 2003). With this in mind, we can once again see how the iris-setosa is differs the most from the other two species (pandas.org, 2021).
 
 <img src='Images\andrews_curve.png'>
+<br>
+</br>
+<h3><b><u><p id='Parallel_Coordinates'>Parallel Coordinates</b></u></p></h3>
+Another way to compare features of a multivariate data is by using a parallel coordinate plot. For this particular plot I used pandas built in data visualisation tool. See below on how to import.
+
+<img src='Images\parallell coord import.PNG'>
+
+<img src='Plots\Parallel Coordinates.png'>
 
 
+A parallel coordinate plot<i>“... allows to compare the feature of several individual observations (series) on a set of numeric variables. Each vertical bar represents a variable and often has its own scale. (The units can even be different). Values are then plotted as series of lines connected across each axis”</i> (Data to Viz, 2021).
+
+From looking at this plot we can once again see that it is the petal variables where there are the most variations between the species, with the iris-setosa most distinguishable differences.
 
 ---
 <h3><b><u><p id='Correlations'>Correlations</b></u></p></h3>
@@ -405,6 +417,8 @@ To conclude, while having met the objectives of this project there is a lot of r
 
 ---
 <h2><b><u><p id='References'>References</b></u></p></h2>
+
+Data to Viz. (2021). PARALLEL COORDINATES PLOT. Available: https://www.data-to-viz.com/graph/parallel.html. Last accessed 21st April 2021.
 
 GeeksforGeeks. (2021). Python sys Module. Available: https://www.geeksforgeeks.org/python-sys-module/#:~:text=The%20sys%20module%20in%20Python,interact%20strongly%20with%20the%20interpreter. Last accessed 15th March 2021.
 
