@@ -82,7 +82,7 @@ sns.set_theme(style="darkgrid") # Styling the grid
 # Plotting on the X axes so it's a vertical countplot, using the df dataframe, choosing the colour palette
 sns.countplot(x="Species", data=df, palette="Set3")
 plt.title('Number of Occurances', color='indigo') # Adding a title 
-plt.savefig('Plots\Countplot') # Saving plot to Plots directory
+plt.savefig('Plots\\Countplot') # Saving plot to Plots directory
 plt.close() # Closes figure 
 
 
@@ -95,7 +95,7 @@ sns.displot(df, x='Sepal Lenght(cm)', hue='Species', palette='Set3', kde=False)
 sns.displot(df, x='Sepal Width(cm)', hue='Species', palette='Set3', kde=False)
 sns.set_theme(style="darkgrid") # Styling the grid
 sns.set_style('ticks') # Adding ticks to axis
-plt.savefig('Plots\Displot') # Saving plot to Plot directory
+plt.savefig('Plots\\Displot') # Saving plot to Plot directory
 plt.clf() # Clears figure with all its axes, but leaves the window opened, such that it may be reused for other plots. Plot's merged if close() was used.
 
 
@@ -105,7 +105,7 @@ plt.figure(figsize=(10,10)) # Setting fig size
 sns.scatterplot(x = 'Sepal Width(cm)', y = 'Sepal Lenght(cm)',data=df, hue='Species', palette='plasma')
 plt.title('Sepal Variables') # Adding a title
 sns.set(style='darkgrid') # Grid style
-plt.savefig('Plots\Scatterplot Sepal Variables') # Save plot to Plots directory
+plt.savefig('Plots\\Scatterplot Sepal Variables') # Save plot to Plots directory
 plt.clf() # Clears figure with all its axes, but leaves the window opened, such that it may be reused for other plots.
 
 plt.figure(figsize=(10,10)) # Setting fig size
@@ -113,7 +113,7 @@ plt.figure(figsize=(10,10)) # Setting fig size
 sns.scatterplot(x = 'Petal Width(cm)', y = 'Petal Lenght(cm)',data=df, hue='Species',palette='plasma')
 plt.title('Petal Variables') # Adding a title
 sns.set(style='darkgrid') # Grid style
-plt.savefig('Plots\Scatterplot Petal Variables') # Saving plot to Plots directory
+plt.savefig('Plots\\Scatterplot Petal Variables') # Saving plot to Plots directory
 plt.clf() # Clears figure with all its axes, but leaves the window opened, such that it may be reused for other plots. Plot's merged if close() was used.
 
 # Boxplot
@@ -122,14 +122,24 @@ plt.figure(figsize=(15,10)) # Setting fig size
 sns.boxplot(data=df, palette='Set3', orient='h')
 plt.title('Boxplot') # Adding a title
 sns.set(style='darkgrid') # Grid style
-plt.savefig('Plots\Boxplot') # Save plot to Plots directory
+plt.savefig('Plots\\Boxplot') # Save plot to Plots directory
 plt.clf() # Clears figure with all its axes, but leaves the window opened, such that it may be reused for other plots. Plot's merged if close() was used.
 
 # Pairplot
 # (dataframe, variable that will produce points with different colors (species), colour palette)
 sns.pairplot(df, hue='Species', palette='plasma')
-plt.savefig('Plots\Pairplot') # Save plot to Plots directory
+plt.savefig('Plots\\Pairplot') # Save plot to Plots directory
 plt.close() # Closes figure 
+
+
+# Parallel Coordinates
+from pandas.plotting import parallel_coordinates # Importing from pandas built in data visualisation tools
+# (dataframe, column containing the class name)
+parallel_coordinates(frame=df, class_column="Species")
+plt.title('Parallel Coordinates') # Adding a title
+plt.savefig('Plots\\Parallel Coordinates') # Save plot to Plots directory
+plt.close() # Closes figure 
+
 
 # Andrews Curve
 plt.figure(figsize=(15,10)) # Setting fig size
@@ -137,20 +147,20 @@ plt.figure(figsize=(15,10)) # Setting fig size
 andrews_curve = pd.plotting.andrews_curves(df,"Species",colormap='magma')
 plt.title('Andrews Curve') # Adding title
 plt.grid( color='black', lw=0.15, ls="--") # Styling grid
-plt.savefig('Plots\Andrews Curve') # Save plot to Plots directory
+plt.savefig('Plots\\Andrews Curve') # Save plot to Plots directory
 plt.close() # Closes figure 
 
 # Heatmap representation of the correlations 
 # (correlation dataframe, colour map, line colour and width add lines to divide cells & their colour, annot shows the data value in each cell)
 sns.heatmap(df.corr(), cmap='Set3',linecolor='white',linewidths=1, annot= True)
 plt.title('Heat Map') # Adding title
-plt.savefig('Plots\Heatmap') # Save plot to Plots directory
+plt.savefig('Plots\\Heatmap') # Save plot to Plots directory
 plt.close() # Closes figure 
 
 # Clustermap - another look at correlations and their relationships
 # (correlation dataframe, colour map, line colour and width add lines to divide cells & their colour, annot shows the data value in each cell)
 cluster = sns.clustermap(df.corr(), cmap='Set3', linecolor='white',linewidths=0.5, annot=True)
-plt.savefig('Plots\Clustermap') # Save plot to Plots directory
+plt.savefig('Plots\\Clustermap') # Save plot to Plots directory
 plt.close() # Closes figure 
 
 # Closing Iris Analysis File
