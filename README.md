@@ -20,6 +20,7 @@
         <li><a href="#Data_Summary">Data Summary</a></li>
         <li><a href="#Count">Count</a></li>
         <li><a href="#Stats">Stats</a></li>
+        <li><a href="#Pivot_Tables">Pivot Tables</a></li>
         <li><a href="#Groupby">Groupby</a></li>
       </ul>
 
@@ -264,6 +265,16 @@ Using the data we separated earlier into smaller dataframes we can do the same f
  <img src='Images\indivdual_summary.PNG'>
 
 ---
+<h3><b><u><p id='Pivot_Tables'>Pivot Tables</b></u></p></h3>
+
+
+Another way we can view this data is by implementing Pivot Tables. I have created ones for mean, max and min values.
+
+<img src='Images\pivot_table_code.PNG'>
+
+<img src='Images\pivot_table.PNG'>
+
+---
 
 <h3><b><u><p id='Groupby'>Groupby</b></u></p></h3>
 
@@ -399,7 +410,7 @@ I personally found this particular plot difficult to decipher at first but, we c
 -----
 ----
 </br>
-<h2><b><u>Conclusion</u></b></h2>
+<h3><b><u><p id='Conclusion'>Conclusion</b></u></p></h3>
 I approached the analysis with the same intention of its original purpose - to be able to identify the different species of iris by the variants in characteristics (Petal length, petal width, sepal length and sepal width). From this analysis I have concluded that the petal is the most important variable when classifying the species of iris. It is easier to distinguish its dimensions between the species than that of the sepal. 
 <br></br>
 

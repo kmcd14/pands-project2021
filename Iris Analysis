@@ -41,8 +41,8 @@ dtype: int64
 ______________________________________________________________________________
 Count of each unique species:
 Iris-versicolor    50
-Iris-virginica     50
 Iris-setosa        50
+Iris-virginica     50
 Name: Species, dtype: int64 
 ______________________________________________________________________________
 Stat Summary: 
@@ -88,6 +88,27 @@ min            4.900000         2.000000          3.000000         1.000000
 50%            5.900000         2.800000          4.350000         1.300000
 75%            6.300000         3.000000          4.600000         1.500000
 max            7.000000         3.400000          5.100000         1.800000 
+______________________________________________________________________________
+Pivot Table Mean Values: 
+                  Petal Lenght(cm)  Petal Width(cm)  Sepal Lenght(cm)  Sepal Width(cm)
+Species                                                                              
+Iris-setosa                 1.464            0.244             5.006            3.418
+Iris-versicolor             4.260            1.326             5.936            2.770
+Iris-virginica              5.552            2.026             6.588            2.974 
+______________________________________________________________________________
+Pivot Table Max Values: 
+                  Petal Lenght(cm)  Petal Width(cm)  Sepal Lenght(cm)  Sepal Width(cm)
+Species                                                                              
+Iris-setosa                   1.9              0.6               5.8              4.4
+Iris-versicolor               5.1              1.8               7.0              3.4
+Iris-virginica                6.9              2.5               7.9              3.8 
+______________________________________________________________________________
+Pivot Table Min Values: 
+                  Petal Lenght(cm)  Petal Width(cm)  Sepal Lenght(cm)  Sepal Width(cm)
+Species                                                                              
+Iris-setosa                   1.0              0.1               4.3              2.3
+Iris-versicolor               3.0              1.0               4.9              2.0
+Iris-virginica                4.5              1.4               4.9              2.2 
 ______________________________________________________________________________
 Mean Values: 
                   Sepal Lenght(cm)  Sepal Width(cm)  Petal Lenght(cm)  Petal Width(cm)
