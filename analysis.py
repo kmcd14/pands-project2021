@@ -1,7 +1,7 @@
 # This python script is a data analysis on the Iris dataset for programming & scripting module
 # The output of this script is found in the text file names 'Iris Analysis'
 # Markdown of the analysis is found in README.md
-# All plots can be found in the image folder
+# All plots can be found in the Plots folder
 # Author: Katie Mc Donald
 
 # Importing libaries
@@ -27,7 +27,7 @@ virginicadf=df.loc[df["Species"]=="Iris-versicolor"] # .loc gets the rows in Spe
 ## CREATING TEXT FILE ##
 
 # Creating a text file called Iris Analysis to print output results of comparing the species
-sys.stdout = open("Iris Analysis", "w", newline='\n') # Using 'w' for read mode. Adding a newline between each print statement 
+sys.stdout = open("Iris Analysis", "w", newline='\n') # Using 'w' for write mode. Adding a newline between each print statement 
 print('******Iris Dataset Analysis********\n______________________________________________________________________________')
 
 
@@ -66,6 +66,18 @@ print(versicolordf.describe(),'\n_______________________________________________
 
 print('iris-virgina Summary: \r')
 print(virginicadf.describe(),'\n______________________________________________________________________________')
+
+
+# Creating a Pivot Table for Mean
+pivot_mean = df.pivot_table(index='Species', values=['Sepal Lenght(cm)', 'Sepal Width(cm)', 'Petal Lenght(cm)', 'Petal Width(cm)'], aggfunc=np.mean)
+print('Pivot Table Mean Values: \r\n', pivot_mean,'\n______________________________________________________________________________')
+# Creating a Pivot Table for Max
+pivot_max = df.pivot_table(index='Species', values=['Sepal Lenght(cm)', 'Sepal Width(cm)', 'Petal Lenght(cm)', 'Petal Width(cm)'], aggfunc=np.max)
+print('Pivot Table Max Values: \r\n', pivot_max,'\n______________________________________________________________________________')
+#Creating a Pivot Table for Min
+pivot_min = df.pivot_table(index='Species', values=['Sepal Lenght(cm)', 'Sepal Width(cm)', 'Petal Lenght(cm)', 'Petal Width(cm)'], aggfunc=np.min)
+print('Pivot Table Min Values: \r\n', pivot_min,'\n______________________________________________________________________________')
+
 
 # Grouping species by mean, max and min values To futher look at this data
 mean_values = df.groupby('Species').mean() # Mean
